@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: rgba(114, 114, 114, 1);
+    transition: all 0.4s ease;
+}
+
+
+hr {
+    background-color: rgba(228, 228, 228, 1);
+    height: 2px;
+    border: none;
+}
+
+a, h1, h2, h3, h4, h5, h6, p, ul, ol, li, span {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+}
