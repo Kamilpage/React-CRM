@@ -1,0 +1,124 @@
+.topbar {
+    margin-left: 248px;
+    padding: 0 32px 0;
+    position: fixed;
+    width: calc(100% - 248px);
+    border-bottom: 2px solid rgba(228, 228, 228, 1);
+}
+
+.topbar__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topbar__left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+.topbar__left input {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+    color: rgba(175, 175, 175, 1);
+    height: 41px;
+    width: 360px;
+    padding-left: 12px;
+    border: 1px solid rgba(175, 175, 175, 1);
+    margin-top: 16.5px;
+    margin-bottom: 16px;
+    border-radius: 4px;
+}
+
+.topbar__left input:focus {
+    border: 1px solid rgba(175, 175, 175, 1);
+    outline: none;
+}
+
+.topbar__left button:nth-of-type(2) {
+    position: absolute;
+    right: 0;
+    transform: translateX(-12px);
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(114, 114, 114, 1);
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+
+.topbar__left button:nth-of-type(1) {
+    position: absolute;
+    right: 0;
+    transform: translateX(-40px);
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    outline: none;
+    border: none;
+
+}
+
+.topbar__left button:hover svg path, .topbar__left button:hover {
+    stroke: dodgerblue;
+    color: dodgerblue;
+}
+
+.topbar__right {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.topbar__right:first-child {
+    padding: 8px;
+    margin-top: 17.5px;
+    margin-bottom: 17.5px;
+}
+
+.topbar__right__el {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.topbar__right__el:hover svg path {
+    stroke: dodgerblue;
+}
+
+.topbar__right__el h2 {
+    font-size: 14px;
+    line-height: 150%;
+    color: rgba(114, 114, 114, 1);
+}
+
+.topbar__right__el h3 {
+    font-size: 14px;
+    line-height: 150%;
+}
+
+.topbar__right__el:hover h3 {
+    text-decoration: underline;
+    color: dodgerblue;
+}
+
+
+.topbar__el {
+    padding-top: 74px;
+}
