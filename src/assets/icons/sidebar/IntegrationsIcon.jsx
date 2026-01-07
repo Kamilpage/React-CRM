@@ -1,0 +1,24 @@
+import React from 'react';
+
+const IntegrationsIcon = ({isActive}) => {
+    return (
+        <>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">\n' + '
+                <path d="M8.75 3.75H3.75V8.75H8.75V3.75Z" stroke={isActive ? '#000' : '#727272'} strokeWidth="1.5" strokeLinecap="round"
+                      strokeLinejoin="round"></path>
+                \n' + '
+                <path d="M16.25 3.75H11.25V8.75H16.25V3.75Z" stroke={isActive ? '#000' : '#727272'} strokeWidth="1.5" strokeLinecap="round"
+                      strokeLinejoin="round"></path>
+                \n' + '
+                <path d="M8.75 11.25H3.75V16.25H8.75V11.25Z" stroke={isActive ? '#000' : '#727272'} strokeWidth="1.5" strokeLinecap="round"
+                      strokeLinejoin="round"></path>
+                \n' + '
+                <path d="M16.25 11.25H11.25V16.25H16.25V11.25Z" stroke={isActive ? '#000' : '#727272'} strokeWidth="1.5"
+                      strokeLinecap="round" strokeLinejoin="round"></path>
+                \n' + '
+            </svg>
+        </>
+    );
+};
+
+export default IntegrationsIcon;

@@ -1,0 +1,147 @@
+.kanban {
+    display: flex;
+    margin-left: 248px;
+    gap: 24px;
+    width: calc(100% - 248px);
+    padding: 32px 32px 0 28px;
+}
+
+.kanban__type {
+    padding: 20px;
+    border: 1px solid rgba(228, 228, 228, 1);
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+}
+
+.kanban__type button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(242, 242, 242, 0.7);
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 100%;
+    border: none;
+    font-size: 16px;
+    line-height: 150%;
+    color: black;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.kanban__type button:hover {
+    background-color: rgba(242, 242, 242, 1);
+}
+
+.kanban__heading {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-bottom: 20px;
+}
+
+.kanban__heading h2 {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 100%;
+}
+
+.kanban__heading span {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 145%;
+    color: rgba(114, 114, 114, 1);
+}
+
+
+.addTask {
+    min-width: 100vh;
+    min-height: 50vh;
+    display: flex;
+}
+
+.modalForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.modalForm h3 {
+    font-weight: 500;
+    font-size: 28px;
+}
+
+.addTask__inputs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.addTask__inputs input {
+    margin-top: 40px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+    padding: 8px;
+    color: black;
+}
+
+.addTask__inputs input:focus {
+    outline: none;
+}
+
+.addTask__inputs textarea:focus {
+    outline: none;
+}
+
+.addTask__inputs textarea {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    padding: 8px;
+    color: black;
+
+}
+
+.addTask__inputs textarea::placeholder {
+    font-family: "Inter", sans-serif;
+}
+
+.addTask__action {
+    display: flex;
+    gap: 12px;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.addTask__action button {
+    margin-top: 12px;
+    padding: 12px;
+    border-radius: 4px;
+    background-color: #e1e1e1;
+    border: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.addTask__action button:focus {
+    outline: none;
+}
+
+.addTask__action button:hover {
+    opacity: 0.8;
+}
+
+.error {
+    color: #AF4B4B;
+    font-size: 13px;
+    margin-top: 6px;
+}

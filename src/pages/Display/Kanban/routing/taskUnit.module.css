@@ -1,0 +1,91 @@
+
+.kanban__tags {
+    display: flex;
+    gap: 9px;
+}
+
+.kanban__item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 18px;
+    border: 1px solid #E4E4E4;
+    margin-top: 16px;
+    border-radius: 4px;
+}
+
+.kanban__item a {
+    padding-bottom: 16px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+}
+
+.kanban__item a:hover {
+    text-decoration: underline;
+}
+
+.task__deadline {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+}
+
+.task__deadline p {
+    font-size: 14px;
+    line-height: 150%;
+    font-weight: 400;
+    color: #727272;
+}
+
+.task__details__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 16px;
+    width: 100%;
+}
+
+
+.task__details__bottom_right {
+    display: flex;
+    gap: 12px;
+
+}
+
+.task__details__bottom_right div {
+    display: flex;
+    gap: 4px;
+    color: #727272;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+}
+
+.kanban__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 6px;
+}
+
+.tag {
+    padding: 4px 8px;
+    font-size: 12px;
+    border-radius: 6px;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+.deleteBtn {
+    background: transparent;
+    border: none;
+    color: #999;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.deleteBtn:hover {
+    color: #c0392b;
+}

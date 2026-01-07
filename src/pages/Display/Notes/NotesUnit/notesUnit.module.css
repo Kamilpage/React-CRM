@@ -1,0 +1,61 @@
+.kanban {
+    display: flex;
+    margin-left: 248px;
+    gap: 24px;
+    width: calc(100% - 248px);
+    padding: 32px 32px 0 28px;
+}
+
+.kanban__type {
+    padding: 20px;
+    border: 1px solid rgba(228, 228, 228, 1);
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+}
+
+.kanban__type button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(242, 242, 242, 0.7);
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 100%;
+    border: none;
+    font-size: 16px;
+    line-height: 150%;
+    color: black;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.kanban__type button:hover {
+    background-color: rgba(242, 242, 242, 1);
+}
+
+.kanban__heading {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-bottom: 20px;
+}
+
+.kanban__heading h2 {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 100%;
+}
+
+.kanban__heading span {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 145%;
+    color: rgba(114, 114, 114, 1);
+}
+
+.kanban__planned {
+
+}
