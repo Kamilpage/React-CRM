@@ -1,32 +1,41 @@
-import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
-
-import TopbarLayout from "./TopbarLayout.jsx";
-import AddButton from '../../ui/AddButton/AddButton.jsx';
-import AddTaskModal from './AddTaskModal/AddTaskModal.jsx';
-
-import ListIcon from '../../../assets/icons/topbar/ListIcon.jsx';
-import KanbanIcon from '../../../assets/icons/topbar/KanbanIcon.jsx';
-import TableIcon from '../../../assets/icons/topbar/TableIcon.jsx';
-
-import styles from './tasksTopbar.module.css';
-import SortIcon from "../../../assets/icons/topbar/SortIcon.jsx";
+import React from 'react';
+import styles from './tasksTopbar.module.css'
+import {NavLink} from "react-router-dom";
+import ListIcon from "../../../assets/icons/topbar/ListIcon.jsx";
+import KanbanIcon from "../../../assets/icons/topbar/KanbanIcon.jsx";
+import TableIcon from "../../../assets/icons/topbar/TableIcon.jsx";
 import FilterIcon from "../../../assets/icons/topbar/FilterIcon.jsx";
+import SortIcon from "../../../assets/icons/topbar/SortIcon.jsx";
+import AddTaskModal from "./AddTaskModal/AddTaskModal.jsx";
+import AddButton from "../../ui/AddButton/AddButton.jsx";
 
-const taskType = [
-    { name: 'List', path: '/tasks/list', Icon: ListIcon },
-    { name: 'Kanban', path: '/tasks/kanban', Icon: KanbanIcon },
-    { name: 'Table', path: '/tasks/table', Icon: TableIcon }
-];
+const TasksTopba1r = () => {
+    const [isOpen, setIsOpen] = React.useState(false);
 
-const TasksTopbar = () => {
-    const [isOpen, setIsOpen] = useState(false);
 
+    const taskType = [
+        {
+            name: 'List',
+            path: '/tasks/list',
+            Icon: ListIcon
+        },
+        {
+            name: 'Kanban',
+            path: '/tasks/kanban',
+            Icon: KanbanIcon
+        },
+        {
+            name: 'Table',
+            path: '/tasks/table',
+            Icon: TableIcon
+        }
+    ];
     return (
         <>
-            <TopbarLayout
-                left={
-                    <>
+            <div>
+
+                <div className={styles.tasks}>
+                    <div className={styles.tasks__display}>
                         <h1>Task</h1>
                         {taskType.map(({ name, path, Icon }) => (
                             <NavLink
@@ -39,17 +48,13 @@ const TasksTopbar = () => {
                                 {({ isActive }) => (
                                     <div className={styles.display__type}>
                                         <Icon active={isActive} />
-                                        <p className={isActive ? styles.activeText : ''}>
-                                            {name}
-                                        </p>
+                                        <p className={isActive ? styles.activeText : ''}>{name}</p>
                                     </div>
                                 )}
                             </NavLink>
                         ))}
-                    </>
-                }
-                right={
-                    <>
+                    </div>
+                    <div className={styles.tasks__right}>
                         <button>
                             {<SortIcon />}
                             Sort By
@@ -64,16 +69,11 @@ const TasksTopbar = () => {
                             onClick={() => setIsOpen(true)}
                         />
                         <AddTaskModal isOpen={isOpen} onClose={() => setIsOpen(false)} />
-                    </>
-                }
-            />
-
-            <AddTaskModal
-                isOpen={isOpen}
-                onClose={() => setIsOpen(false)}
-            />
+                    </div>
+                </div>
+            </div>
         </>
     );
 };
 
-export default TasksTopbar;
+export default TasksTopba1r;

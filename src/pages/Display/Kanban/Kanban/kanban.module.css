@@ -4,6 +4,7 @@
     gap: 24px;
     width: calc(100% - 248px);
     padding: 32px 32px 0 28px;
+
 }
 
 .kanban__type {
@@ -144,4 +145,9 @@
     color: #AF4B4B;
     font-size: 13px;
     margin-top: 6px;
+}
+
+.kanban__planned {
+    min-height: 120px; /* КРИТИЧЕСКИ ВАЖНО */
+    padding: 8px;
 }

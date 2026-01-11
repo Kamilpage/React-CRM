@@ -5,12 +5,14 @@ import questionMark from '../../../assets/icons/others/question.svg'
 import UserSelect from "../../Reusable/CustomSelect/UserSelect.jsx";
 import { useEffect, useRef } from "react";
 import {useUser} from "./UserContext.jsx";
+import {useSearch} from "./SearchContext.jsx";
 
 // ЗДЕСЬ ПОИСК, HELP CENTER, ACCOUNT СВЕРХУ ЭКРАНА
 
 
 const SearchTop = () => {
     const inputRef = useRef(null);
+    const { query, setQuery } = useSearch();
 
     useEffect(() => {
         const handler = (e) => {
@@ -40,7 +42,8 @@ const SearchTop = () => {
             <div className={styles.topbar}>
                 <div className={styles.topbar__inner}>
                     <div className={styles.topbar__left}>
-                        <input   ref={inputRef}  type="text" placeholder='Search'/>
+                        <input   ref={inputRef}  type="text" placeholder='Search' value={query}
+                                 onChange={(e) => setQuery(e.target.value)}/>
                         <img title='Подсказка для поиска Cmd+F или Ctr+F для Windows' src={hotKeys} alt="Подсказка для поиска ctr+F"/>
                     </div>
 

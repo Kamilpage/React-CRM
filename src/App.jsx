@@ -1,26 +1,36 @@
-import './App.css'
-import Sidebar from "./pages/FixedComponents/Sidebar/Sidebar.jsx";
-import SearchTop from "./pages/FixedComponents/SearchBar/SearchTop.jsx";
-import {Routes, Route} from "react-router-dom";
-import Kanban from "./pages/Display/Kanban/Kanban/Kanban.jsx";
-import TasksTopbar from "./pages/FixedComponents/TasksTopbar/TasksTopbar.jsx";
-import ListUnit from "./pages/Display/Lists/ListUnit/ListUnit.jsx";
-import NotesUnit from "./pages/Display/Notes/NotesUnit/NotesUnit.jsx";
+import './App.css';
+import { Routes, Route, Navigate } from 'react-router-dom';
 
+import Sidebar from './pages/FixedComponents/Sidebar/Sidebar.jsx';
+import SearchTop from './pages/FixedComponents/SearchBar/SearchTop.jsx';
+
+import Kanban from './pages/Display/Kanban/Kanban/Kanban.jsx';
+import TaskListView from './pages/Display/Lists/TaskListView/TaskListView.jsx';
+
+import TasksLayout from './TasksLayout.jsx';
+import NotesLayout from './NotesLayout.jsx';
+
+import NotesDisplay from './pages/NotesView/NotesDisplay/NotesDisplay.jsx';
 
 function App() {
     return (
         <>
-            <Sidebar/>
-            <SearchTop/>
-            <TasksTopbar/>
+            <Sidebar />
+            <SearchTop />
+
             <Routes>
-                <Route path="/tasksTopbar/kanban" element={<Kanban/>}/>
-                <Route path="/tasksTopbar/list" element={<ListUnit/>}/>
-                <Route path="/notes" element={<NotesUnit/>}/>
+                <Route path="/tasks" element={<TasksLayout />}>
+                    <Route index element={<Navigate to="kanban" replace />} />
+                    <Route path="kanban" element={<Kanban />} />
+                    <Route path="list" element={<TaskListView />} />
+                </Route>
+
+                <Route path="/notes" element={<NotesLayout />}>
+                    <Route index element={<NotesDisplay />} />
+                </Route>
             </Routes>
         </>
-    )
+    );
 }
 
-export default App
+export default App;

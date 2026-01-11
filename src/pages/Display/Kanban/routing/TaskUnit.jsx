@@ -1,37 +1,67 @@
 import React from 'react';
-import deadline from '../../../../assets/icons/others/deadline.svg'
-import styles from './taskUnit.module.css'
-import chat from '../../../../assets/icons/others/chat.svg'
-import attachments from '../../../../assets/icons/others/attachment.svg'
+import deadline from '../../../../assets/icons/others/deadline.svg';
+import styles from './taskUnit.module.css';
+import chat from '../../../../assets/icons/others/chat.svg';
+import attachments from '../../../../assets/icons/others/attachment.svg';
 import DisplayModal from "../TaskDisplayModal/DisplayModal.jsx";
-import {TAGS_MAP} from "../../../FixedComponents/TasksTopbar/tags.js";
-import {useKanban} from "../Kanban/KanbanContext.jsx";
+import { TAGS_MAP } from "../../../FixedComponents/TasksTopbar/AddTaskModal/tags.js";
+import { useKanban } from "../Kanban/KanbanContext.jsx";
+import { useSortable } from '@dnd-kit/sortable';
+import { CSS } from '@dnd-kit/utilities';
+import {useConfirm} from "../../../Reusable/ConfirmModal/ConfirmContext.jsx";
+
+const TaskUnit = ({ task, columnId }) => {
+    const {
+        attributes,
+        listeners,
+        setNodeRef,
+        transform,
+        transition,
+    } = useSortable({
+        id: task.id,
+        data: {
+            type: 'task',
+            columnId,
+        },
+    });
+
+    const style = {
+        transform: CSS.Transform.toString(transform),
+        transition,
+    };
+
+    const { removeTask } = useKanban();
+    const [isOpen, setIsOpen] = React.useState(false);
+
+    const confirm = useConfirm();
 
 
-const TaskUnit = ({task, columnId}) => {
-    const {removeTask} = useKanban();
-    const handleDelete = (e) => {
+    const handleDelete = async () => {
+        const ok = await confirm({
+            title: "Delete task",
+            description: "This action cannot be undone",
+            confirmText: "Delete",
+            danger: true,
+        });
 
-        e.stopPropagation();
-        if (!window.confirm('Delete this task?')) return;
+        if (!ok) return;
+
         removeTask(columnId, task.id);
     };
-    const [isOpen, setIsOpen] = React.useState(false);
-    const handleOpen = () => {
-        setIsOpen(!isOpen);
-    }
-    const handleClose = () => {
-        setIsOpen(false);
-    }
+
     return (
         <>
-            <div className={styles.kanban__description}>
-                <div className={`${styles.kanban__item}`}>
-                    <div className={styles.kanban__tags}>
+            <div
+                ref={setNodeRef}
+                style={style}
+                className={styles.card}
+                {...attributes}
+            >
+                <div className={styles.header}>
+                    <div className={styles.tags}>
                         {task.tags?.map(tagId => {
                             const tag = TAGS_MAP[tagId];
                             if (!tag) return null;
-
                             return (
                                 <span
                                     key={tagId}
@@ -41,46 +71,66 @@ const TaskUnit = ({task, columnId}) => {
                                         backgroundColor: tag.background,
                                     }}
                                 >
-                {tag.label}
-            </span>
+                                    {tag.label}
+                                </span>
                             );
                         })}
                     </div>
-                    <a onClick={handleOpen} href='#'>{task.title}</a>
-                    <div className={styles.task__deadline}>
-                        <img src={deadline} alt="deadline"/>
-                        <p></p>
+
+                    <div className={styles.actions}>
+                        <span
+                            className={styles.dragHandle}
+                            {...listeners}
+                            title="Drag"
+                        >
+                            ⠿
+                        </span>
+
+                        <button
+                            type="button"
+                            className={styles.deleteBtn}
+                            onClick={handleDelete}
+                        >
+                            ×
+                        </button>
                     </div>
-                    <div className={styles.task__details__bottom}>
-                        <div className={styles.task__details__bottom_left}>
-                            <p>people</p>
-                            <button
-                                type="button"
-                                className={styles.deleteBtn}
-                                onClick={handleDelete}
-                            >
-                                ✕
-                            </button>
-                        </div>
-                        <div className={styles.task__details__bottom_right}>
-                            <div>
-                                <img src={attachments} alt="attachments"/>
-                                <p>{task.attachments.length}</p>
-                            </div>
-                            <div>
-                                <img src={chat} alt="comments"/>
-                                <p>{task.comments.length}</p>
-                            </div>
-                        </div>
+                </div>
+
+                <div
+                    className={styles.title}
+                    onClick={() => setIsOpen(true)}
+                >
+                    {task.title}
+                </div>
+
+                <div className={styles.deadline}>
+                    <img src={deadline} alt="" />
+                    <span>Due date</span>
+                </div>
+
+                <div className={styles.footer}>
+                    <span className={styles.people}>people</span>
+
+                    <div className={styles.meta}>
+                        <span>
+                            <img src={attachments} alt="" />
+                            {task.attachments.length}
+                        </span>
+                        <span>
+                            <img src={chat} alt="" />
+                            {task.comments.length}
+                        </span>
                     </div>
                 </div>
             </div>
+
             <DisplayModal
                 task={task}
                 columnId={columnId}
                 isOpen={isOpen}
-                onClose={handleClose}
-            />        </>
+                onClose={() => setIsOpen(false)}
+            />
+        </>
     );
 };
 

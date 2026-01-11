@@ -1,3 +1,5 @@
+
+
 .comment {
     padding: 10px 12px;
     border-radius: 8px;
@@ -68,4 +70,24 @@
     font-size: 13px;
     color: #999;
     margin-bottom: 6px;
+}
+.commentsList {
+    max-height: 260px;          /* можно 220–300 под вкус */
+    overflow-y: auto;
+    padding-right: 6px;
+    margin-bottom: 10px;
+}
+
+/* аккуратный скролл */
+.commentsList::-webkit-scrollbar {
+    width: 6px;
+}
+
+.commentsList::-webkit-scrollbar-thumb {
+    background: #d0d0d0;
+    border-radius: 4px;
+}
+
+.commentsList::-webkit-scrollbar-track {
+    background: transparent;
 }

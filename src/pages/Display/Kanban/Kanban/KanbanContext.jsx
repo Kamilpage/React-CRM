@@ -1,39 +1,73 @@
-import React from "react";
-import {useUser} from "../../../FixedComponents/SearchBar/UserContext.jsx";
+import React, {
+    createContext,
+    useContext,
+    useEffect,
+    useMemo,
+    useState
+} from 'react';
 
-const KanbanContext = React.createContext(null);
+import { useUser } from '../../../FixedComponents/SearchBar/UserContext.jsx';
+import { useSearch } from '../../../FixedComponents/SearchBar/SearchContext.jsx';
+
+const KanbanContext = createContext(null);
 const STORAGE_KEY = 'kanban_tasks';
 
 export const KanbanProvider = ({ children }) => {
     const { user } = useUser();
-    const [kanbanType, setKanbanType] = React.useState(() => {
-        const saved = localStorage.getItem(STORAGE_KEY);
-        return saved ? JSON.parse(saved) : [
-            {
-                id: 'planned',
-                color: '#B1AB1D',
-                title: 'Planned',
-                tasks: [{ id: 1, title: 'Monthly Product Discussion', description: '', comments: [], attachments: [] }],
-            },
-            {
-                id: 'upcoming',
-                color: '#6884FD',
-                title: 'Upcoming',
-                tasks: [{ id: 4, title: 'Create Monthly Revenue Recap', description: '', comments: [], attachments: [] }],
-            },
-            {
-                id: 'completed',
-                color: '#39C682',
-                title: 'Completed',
-                tasks: [{ id: 9, title: 'Uploading New Items to Marketplace (done)', description: '', comments: [], attachments: [] }],
-            }
-        ];
+    const { query } = useSearch();
+
+    /* 🔹 source of truth */
+    const [kanbanType, setKanbanType] = useState(() => {
+        try {
+            const saved = localStorage.getItem(STORAGE_KEY);
+            return saved
+                ? JSON.parse(saved)
+                : [
+                    {
+                        id: 'planned',
+                        color: '#B1AB1D',
+                        title: 'Planned',
+                        tasks: [],
+                    },
+                    {
+                        id: 'upcoming',
+                        color: '#6884FD',
+                        title: 'Upcoming',
+                        tasks: [],
+                    },
+                    {
+                        id: 'completed',
+                        color: '#39C682',
+                        title: 'Completed',
+                        tasks: [],
+                    }
+                ];
+        } catch {
+            return [];
+        }
     });
 
-    React.useEffect(() => {
+    /* 🔹 persist raw kanban */
+    useEffect(() => {
         localStorage.setItem(STORAGE_KEY, JSON.stringify(kanbanType));
     }, [kanbanType]);
 
+    /* 🔹 derived state: search */
+    const filteredKanban = useMemo(() => {
+        if (!query.trim()) return kanbanType;
+
+        const q = query.toLowerCase();
+
+        return kanbanType.map(col => ({
+            ...col,
+            tasks: col.tasks.filter(task =>
+                task.title.toLowerCase().includes(q) ||
+                task.description.toLowerCase().includes(q)
+            )
+        }));
+    }, [kanbanType, query]);
+
+    /* 🔹 actions */
     const addTask = (columnId, task) => {
         setKanbanType(prev =>
             prev.map(col =>
@@ -43,6 +77,7 @@ export const KanbanProvider = ({ children }) => {
             )
         );
     };
+
     const removeTask = (columnId, taskId) => {
         setKanbanType(prev =>
             prev.map(col =>
@@ -54,6 +89,22 @@ export const KanbanProvider = ({ children }) => {
                     : col
             )
         );
+    };
+
+    const moveTask = (fromColumnId, toColumnId, taskId, newIndex) => {
+        setKanbanType(prev => {
+            const next = structuredClone(prev);
+
+            const fromCol = next.find(c => c.id === fromColumnId);
+            const toCol = next.find(c => c.id === toColumnId);
+
+            const taskIndex = fromCol.tasks.findIndex(t => t.id === taskId);
+            const [task] = fromCol.tasks.splice(taskIndex, 1);
+
+            toCol.tasks.splice(newIndex, 0, task);
+
+            return next;
+        });
     };
 
     const addComment = (columnId, taskId, text) => {
@@ -73,11 +124,11 @@ export const KanbanProvider = ({ children }) => {
                                             author: user.name,
                                             text,
                                             createdAt: new Date().toISOString(),
-                                        }
-                                    ]
+                                        },
+                                    ],
                                 }
                                 : task
-                        )
+                        ),
                     }
                     : col
             )
@@ -101,11 +152,11 @@ export const KanbanProvider = ({ children }) => {
                                             name: file.name,
                                             size: file.size,
                                             type: file.type,
-                                        }
-                                    ]
+                                        },
+                                    ],
                                 }
                                 : task
-                        )
+                        ),
                     }
                     : col
             )
@@ -114,18 +165,24 @@ export const KanbanProvider = ({ children }) => {
 
     return (
         <KanbanContext.Provider
-            value={{ kanbanType, addTask, removeTask, addComment, addAttachment }}
-        >            {children}
+            value={{
+                kanbanType: filteredKanban, // 👈 UI получает отфильтрованную структуру
+                addTask,
+                removeTask,
+                moveTask,
+                addComment,
+                addAttachment,
+            }}
+        >
+            {children}
         </KanbanContext.Provider>
     );
 };
 
 export const useKanban = () => {
-    const context = React.useContext(KanbanContext);
-    if (!context) {
+    const ctx = useContext(KanbanContext);
+    if (!ctx) {
         throw new Error('useKanban must be used within KanbanProvider');
     }
-    return context;
+    return ctx;
 };
-
-

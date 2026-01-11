@@ -1,3 +1,22 @@
+.tasks {
+    margin-left: 248px;
+    padding-top: 75.5px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid rgba(228, 228, 228, 1);
+}
+
+.tasks__display {
+    display: flex;
+    align-items: center;
+}
+
+.tasks__display h1 {
+    font-size: 24px;
+    line-height: 120%;
+    padding: 20.1px 36px 20.1px 28px;
+}
+
 
 .display__type {
     display: flex;
@@ -9,25 +28,9 @@
 }
 
 
-.display__type:hover {
+.display__type:hover, .display__type:hover svg path {
     border-bottom: 1px solid black;
-
-}
-
-
-.activeBtn {
-    .display__type, .display__type svg path {
-        color: black;
-        border-bottom: 1px solid black;
-        stroke: black;
-
-    }
-}
-
-.activeBtn {
-    .display__type p {
-        color: black;
-    }
+    stroke: black;
 }
 
 .tasks__right {
@@ -54,14 +57,16 @@
     margin-right: 32px;
 }
 
-.tasks__right button:hover svg path {
+.tasks__right button:hover svg path{
     stroke: black;
 }
-
-
 
 .vertical_line {
     height: 34px;
     padding-left: 1px;
     background-color: rgba(228, 228, 228, 1);
+}
+
+.tasks__hr {
+    z-index: -1;
 }
