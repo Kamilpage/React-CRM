@@ -1,0 +1,37 @@
+
+.display__type {
+    display: flex;
+    gap: 8px;
+    padding: 24px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    border-bottom: 1px solid white;
+}
+
+
+.display__type:hover {
+    border-bottom: 1px solid black;
+
+}
+
+
+.activeBtn {
+    .display__type, .display__type svg path {
+        color: black;
+        border-bottom: 1px solid black;
+        stroke: black;
+
+    }
+}
+
+.activeBtn {
+    .display__type p {
+        color: black;
+    }
+}
+
+.vertical_line {
+    height: 34px;
+    padding-left: 1px;
+    background-color: rgba(228, 228, 228, 1);
+}

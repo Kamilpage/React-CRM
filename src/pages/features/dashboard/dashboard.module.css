@@ -1,0 +1,11 @@
+.layout {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* ВАЖНО: отступ под fixed/sticky topbar */
+.content {
+padding: 32px;
+    margin-left: 248px;
+}

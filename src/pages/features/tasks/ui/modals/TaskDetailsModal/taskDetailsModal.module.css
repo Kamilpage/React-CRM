@@ -1,0 +1,93 @@
+
+
+.comment {
+    padding: 10px 12px;
+    border-radius: 8px;
+    background: #f7f7f7;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.comment strong {
+    font-size: 13px;
+    font-weight: 600;
+    color: #222;
+}
+
+.comment p {
+    font-size: 14px;
+    line-height: 1.4;
+    color: #333;
+    margin: 0;
+}
+
+.comment span {
+    font-size: 11px;
+    color: #888;
+}
+
+
+.comments,
+.attachments {
+    margin-top: 16px;
+}
+
+.comments h4,
+.attachments h4 {
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.commentForm {
+    margin-top: 12px;
+}
+
+.commentForm input {
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+.attachment {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    padding: 4px 0;
+}
+
+.attachment span {
+    color: #777;
+    font-size: 12px;
+}
+
+.empty {
+    font-size: 13px;
+    color: #999;
+    margin-bottom: 6px;
+}
+.commentsList {
+    max-height: 260px;          /* можно 220–300 под вкус */
+    overflow-y: auto;
+    padding-right: 6px;
+    margin-bottom: 10px;
+}
+
+/* аккуратный скролл */
+.commentsList::-webkit-scrollbar {
+    width: 6px;
+}
+
+.commentsList::-webkit-scrollbar-thumb {
+    background: #d0d0d0;
+    border-radius: 4px;
+}
+
+.commentsList::-webkit-scrollbar-track {
+    background: transparent;
+}

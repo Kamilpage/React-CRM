@@ -1,0 +1,50 @@
+.tableWrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background: #fafafa;
+}
+
+th {
+    text-align: left;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 12px;
+    color: #555;
+    border-bottom: 1px solid #eee;
+    cursor: default;
+}
+
+th.sortable {
+    cursor: pointer;
+    user-select: none;
+}
+
+.sortIcon {
+    margin-left: 6px;
+    font-size: 10px;
+}
+
+td {
+    padding: 12px;
+    font-size: 14px;
+    border-bottom: 1px solid #f1f1f1;
+    vertical-align: middle;
+}
+
+tr:hover td {
+    background: #fafafa;
+}
+
+.empty {
+    text-align: center;
+    padding: 40px;
+    color: #999;
+}

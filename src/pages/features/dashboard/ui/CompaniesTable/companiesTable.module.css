@@ -1,0 +1,54 @@
+.wrapper {
+    background: #fff;
+    border-radius: 14px;
+    border: 1px solid #f1f1f1;
+    padding: 20px;
+}
+
+.topbar {
+    margin-bottom: 16px;
+}
+
+.search {
+    width: 260px;
+    padding: 8px 12px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+.company {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+}
+
+.name {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.industry {
+    font-size: 12px;
+    color: #888;
+}
+
+.status {
+    padding: 4px 8px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.viewBtn {
+    padding: 6px 10px;
+    border-radius: 8px;
+    font-size: 12px;
+    background: #fff;
+    border: 1px solid #ddd;
+}

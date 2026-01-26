@@ -1,16 +1,23 @@
 import './App.css';
 import { Routes, Route, Navigate } from 'react-router-dom';
 
-import Sidebar from './pages/FixedComponents/Sidebar/Sidebar.jsx';
-import SearchTop from './pages/FixedComponents/SearchBar/SearchTop.jsx';
+import Sidebar from './app/layout/Sidebar/Sidebar.jsx';
+import SearchTop from './app/layout/SearchBar/SearchTop.jsx';
 
-import Kanban from './pages/Display/Kanban/Kanban/Kanban.jsx';
-import TaskListView from './pages/Display/Lists/TaskListView/TaskListView.jsx';
+import KanbanBoard from './pages/features/tasks/ui/kanban/KanbanBoard.jsx';
+import TaskListView from './pages/features/tasks/lists/TaskListView/TaskListView.jsx';
 
-import TasksLayout from './TasksLayout.jsx';
-import NotesLayout from './NotesLayout.jsx';
+import TasksLayout from './app/layout/TasksLayout/TasksLayout.jsx';
+import NotesLayout from './app/layout/NotesLayout/NotesLayout.jsx';
 
-import NotesDisplay from './pages/NotesView/NotesDisplay/NotesDisplay.jsx';
+import NotesGrid from './pages/features/notes/ui/NotesGrid/NotesGrid.jsx';
+import { NotesProvider } from "./pages/features/notes/contex/NotesContex.jsx";
+import DashboardLayout from "./pages/features/dashboard/DashboardLayout.jsx";
+import Dashboard from "./pages/features/dashboard/Dashboard.jsx";
+import AnalyticsLayout from "./pages/features/analytics/ui/AnalyticsLayout/AnalyticsLayout.jsx";
+import AnalyticsPage from "./pages/features/analytics/AnalyticsPage.jsx";
+import ActivityBoard from "./pages/features/analytics/ui/Tabs/Activity/ActivityBoard.jsx";
+
 
 function App() {
     return (
@@ -18,17 +25,35 @@ function App() {
             <Sidebar />
             <SearchTop />
 
-            <Routes>
-                <Route path="/tasks" element={<TasksLayout />}>
-                    <Route index element={<Navigate to="kanban" replace />} />
-                    <Route path="kanban" element={<Kanban />} />
-                    <Route path="list" element={<TaskListView />} />
-                </Route>
+            <NotesProvider>
+                <Routes>
 
-                <Route path="/notes" element={<NotesLayout />}>
-                    <Route index element={<NotesDisplay />} />
-                </Route>
-            </Routes>
+                    {/* Dashboard */}
+                    <Route path="/dashboard" element={<DashboardLayout />}>
+                        <Route index element={<Dashboard />} />
+                    </Route>
+
+                    {/* Tasks */}
+                    <Route path="/tasks" element={<TasksLayout />}>
+                        <Route index element={<Navigate to="kanban" replace />} />
+                        <Route path="kanban" element={<KanbanBoard />} />
+                        <Route path="list" element={<TaskListView />} />
+                    </Route>
+
+                    {/* Notes */}
+                    <Route path="/notes" element={<NotesLayout />}>
+                        <Route index element={<NotesGrid />} />
+                    </Route>
+
+                    {/* Analytics */}
+                    <Route path="/analytics" element={<AnalyticsLayout />}>
+                        <Route index element={<AnalyticsPage />} />
+                        <Route path="activity" element={<ActivityBoard />} />
+
+                    </Route>
+
+                </Routes>
+            </NotesProvider>
         </>
     );
 }

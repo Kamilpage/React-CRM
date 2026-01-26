@@ -4,10 +4,10 @@ import App from './App.jsx';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { store } from './store';
-import { KanbanProvider } from './pages/Display/Kanban/Kanban/KanbanContext.jsx';
-import {UserProvider} from "./pages/FixedComponents/SearchBar/UserContext.jsx";
-import {ConfirmProvider} from "./pages/Reusable/ConfirmModal/ConfirmContext.jsx";
-import {SearchProvider} from "./pages/FixedComponents/SearchBar/SearchContext.jsx";
+import { KanbanProvider } from './pages/features/tasks/context/KanbanContext.jsx';
+import {UserProvider} from "./app/context/UserContext.jsx";
+import {ConfirmProvider} from "./shared/modals/ConfirmModal/ConfirmContext.jsx";
+import {SearchProvider} from "./app/context/SearchContext.jsx";
 
 
 
