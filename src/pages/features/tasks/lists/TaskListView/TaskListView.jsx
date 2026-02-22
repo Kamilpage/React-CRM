@@ -1,11 +1,11 @@
 import React from 'react';
 import styles from "./taskListView.module.css";
 import TaskListRow from "../TaskListRow/TaskListRow.jsx";
-import {useKanban} from "../../context/KanbanContext.jsx";
+import { useTasks} from "../../context/TasksContext.jsx";
 
 const TaskListView = () => {
-    const { kanbanType } = useKanban();
-    const tasks = kanbanType.flatMap(col =>
+    const { tasks } = useTasks();
+    const tasksItem = tasks.flatMap(col =>
         col.tasks.map(task => ({
             ...task,
             columnId: col.id,
@@ -16,7 +16,7 @@ const TaskListView = () => {
     return (
         <>
             <div className={styles.list}>
-                {tasks.map(task => (
+                {tasksItem.map(task => (
                     <TaskListRow
                         key={task.id}
                         task={task}

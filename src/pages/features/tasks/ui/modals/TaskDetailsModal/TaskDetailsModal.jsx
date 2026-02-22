@@ -1,6 +1,6 @@
 import Modal from "../../../../../../shared/modals/Modal/Modal.jsx";
 import styles from './taskDetailsModal.module.css'
-import {useKanban} from "../../../context/KanbanContext.jsx";
+import {useTasks} from "../../../context/TasksContext.jsx";
 import { useState, useRef, useEffect } from 'react';
 import AlertModal from "../../../../../../shared/modals/AlertModal/AlertModal.jsx";
 
@@ -19,7 +19,7 @@ const TaskDetailsModal = ({ task, columnId, isOpen, onClose }) => {
         title: '',
         message: '',
     });
-    const { addComment, addAttachment } = useKanban();
+    const { addComment, addAttachment } = useTasks();
     const [commentText, setCommentText] = useState('');
     const commentsEndRef = useRef(null);
     const [isUploading, setIsUploading] = useState(false);

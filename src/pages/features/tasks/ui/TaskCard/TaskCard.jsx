@@ -5,7 +5,7 @@ import chat from '../../../../../assets/icons/ui/chat.svg';
 import attachments from '../../../../../assets/icons/ui/attachment.svg';
 import TaskDetailsModal from "../modals/TaskDetailsModal/TaskDetailsModal.jsx";
 import { TAGS_MAP } from "../../../../../shared/model/tags.model.js";
-import { useKanban } from "../../context/KanbanContext.jsx";
+import {useTasks} from "../../context/TasksContext.jsx";
 import { useSortable } from '@dnd-kit/sortable';
 import { CSS } from '@dnd-kit/utilities';
 import {useConfirm} from "../../../../../shared/modals/ConfirmModal/ConfirmContext.jsx";
@@ -30,7 +30,7 @@ const TaskCard = ({ task, columnId }) => {
         transition,
     };
 
-    const { removeTask } = useKanban();
+    const { removeTask } = useTasks();
     const [isOpen, setIsOpen] = React.useState(false);
 
     const confirm = useConfirm();

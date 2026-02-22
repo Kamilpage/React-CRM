@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import Modal from "../../../../../../shared/modals/Modal/Modal.jsx";
-import {useKanban} from "../../../context/KanbanContext.jsx";
+import { useTasks} from "../../../context/TasksContext.jsx";
 import styles from './addTask.module.css';
 import {TAGS_MAP} from "../../../../../../shared/model/tags.model.js";
 import ConfirmModal from "../../../../../../shared/modals/ConfirmModal/ConfirmModal.jsx";
 
 const AddTaskModal = ({ isOpen, onClose, defaultStatus = 'planned'}) => {
-    const { addTask } = useKanban();
+    const { addTask } = useTasks();
 
     const [form, setForm] = useState({
         title: '',

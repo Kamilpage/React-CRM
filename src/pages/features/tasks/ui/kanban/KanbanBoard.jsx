@@ -1,12 +1,12 @@
 import React from 'react';
 import styles from './kanbanBoard.module.css';
 import { DndContext } from '@dnd-kit/core';
-import { useKanban } from '../../context/KanbanContext.jsx';
+import { useTasks} from '../../context/TasksContext.jsx';
 import KanbanColumn from './KanbanColumn.jsx';
 import AddTaskModal from "../modals/AddTaskModal/AddTaskModal.jsx";
 
 const KanbanBoard = () => {
-    const { kanbanType, moveTask } = useKanban();
+    const { columns, moveTask } = useTasks();
 
     const [isAddOpen, setIsAddOpen] = React.useState(false);
     const [defaultStatus, setDefaultStatus] = React.useState('planned');
@@ -42,12 +42,11 @@ const KanbanBoard = () => {
         moveTask(fromColumn, toColumn, active.id, toIndex);
     };
 
-
     return (
         <>
             <DndContext onDragEnd={handleDragEnd}>
                 <div className={styles.kanban}>
-                    {kanbanType.map(col => (
+                    {columns.map(col => (
                         <KanbanColumn
                             key={col.id}
                             col={col}

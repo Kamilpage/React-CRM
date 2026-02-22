@@ -12,7 +12,7 @@ import TableIcon from '../../../../../assets/react/topbar/TableIcon.jsx';
 import styles from './tasksTopbar.module.css';
 
 import SortFilterGroup from "../../../../../shared/ui/SortFilterGroup/SortFilterGroup.jsx";
-import {useKanban} from "../../context/KanbanContext.jsx";
+import {useTasks} from "../../context/TasksContext.jsx";
 
 const taskType = [
     { name: 'List', path: '/tasks/list', Icon: ListIcon },
@@ -21,71 +21,63 @@ const taskType = [
 ];
 
 
-const TasksTopbar = () => {
-    const [isOpen, setIsOpen] = useState(false);
-    const { sortBy, setSortBy, filters, setFilters } = useKanban();
-
+const TasksTopbar = ({ onOpenAddModal, sortBy, setSortBy, filters, setFilters }) => {
 
     return (
-        <>
-            <TopbarLayout
-                left={
-                    <>
-                        <h1>Task</h1>
-                        {taskType.map(({ name, path, Icon }) => (
-                            <NavLink
-                                key={path}
-                                to={path}
-                                className={({ isActive }) =>
-                                    isActive ? styles.activeBtn : styles.btn
-                                }
-                            >
-                                {({ isActive }) => (
-                                    <div className={styles.display__type}>
-                                        <Icon active={isActive} />
-                                        <p className={isActive ? styles.activeText : ''}>
-                                            {name}
-                                        </p>
-                                    </div>
-                                )}
-                            </NavLink>
-                        ))}
-                    </>
-                }
-                right={
-                    <>
-                        <SortFilterGroup
-                            sortItems={[
-                                { value: "created", label: "Created" },
-                                { value: "due", label: "Due date" },
-                                { value: "title", label: "Title (A–Z)" }
-                            ]}
+        <TopbarLayout
+            left={
+                <>
+                    <h1>Task</h1>
 
-                            filterItems={[
-                                { value: "tag1", label: "Priority" },
-                                { value: "tag2", label: "Bug" },
-                                { value: "tag3", label: "Feature" }
-                            ]}
-                            activeSort={sortBy}
-                            activeFilters={filters}
-                            onSortChange={setSortBy}
-                            onFilterChange={setFilters}
-                        />
-                        <div className={styles.vertical_line}></div>
-                        <AddButton
-                            label="+ Add Task"
-                            onClick={() => setIsOpen(true)}
-                        />
-                        <AddTaskModal isOpen={isOpen} onClose={() => setIsOpen(false)} />
-                    </>
-                }
-            />
+                    {taskType.map(({ name, path, Icon }) => (
+                        <NavLink
+                            key={path}
+                            to={path}
+                            className={({ isActive }) =>
+                                isActive ? styles.activeBtn : styles.btn
+                            }
+                        >
+                            {({ isActive }) => (
+                                <div className={styles.display__type}>
+                                    <Icon active={isActive} />
+                                    <p className={isActive ? styles.activeText : ''}>
+                                        {name}
+                                    </p>
+                                </div>
+                            )}
+                        </NavLink>
+                    ))}
+                </>
+            }
 
-            <AddTaskModal
-                isOpen={isOpen}
-                onClose={() => setIsOpen(false)}
-            />
-        </>
+            right={
+                <>
+                    <SortFilterGroup
+                        sortItems={[
+                            { value: "created", label: "Created" },
+                            { value: "due", label: "Due date" },
+                            { value: "title", label: "Title (A–Z)" }
+                        ]}
+                        filterItems={[
+                            { value: "tag1", label: "Priority" },
+                            { value: "tag2", label: "Bug" },
+                            { value: "tag3", label: "Feature" }
+                        ]}
+                        activeSort={sortBy}
+                        activeFilters={filters}
+                        onSortChange={setSortBy}
+                        onFilterChange={setFilters}
+                    />
+
+                    <div className={styles.vertical_line}></div>
+
+                    <AddButton
+                        label="+ Add Task"
+                        onClick={onOpenAddModal}
+                    />
+                </>
+            }
+        />
     );
 };
 
