@@ -1,0 +1,29 @@
+
+
+.activity {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 24px;
+    margin-left: 248px;
+    padding: 32px;
+}
+
+/* Левая колонка — 4 из 12 */
+.leftColumn {
+    grid-column: span 4;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.rightColumn {
+    grid-column: span 8;
+}
+
+/* Вторая строка */
+.activity > :nth-child(3) {
+    grid-column: span 6;
+}
+.activity > :nth-child(4) {
+    grid-column: span 6;
+}

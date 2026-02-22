@@ -13,9 +13,9 @@
     padding: 20px;
 
     display: flex;
-    align-items: center;
     justify-content: space-between;
-
+    gap: 12px;
+    flex-direction: column;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
     border: 1px solid #f1f1f1;
 
@@ -32,21 +32,21 @@
 .content {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 4px;
 }
 
 /* Title */
 .title {
     font-size: 14px;
-    font-weight: 500;
     color: #5f6368;
 }
 
 /* Value */
 .value {
-    font-size: 22px;
-    font-weight: 700;
+    font-size: 28px;
+    line-height: 120%;
     color: #1a1a1a;
+
 }
 
 /* Иконки справа */
