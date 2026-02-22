@@ -1,0 +1,59 @@
+.card {
+    padding: 20px;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    background: #fff;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.title {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 16px;
+    line-height: 120%;
+}
+
+.chart {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.column {
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.barWrapper {
+    width: 16px;
+    height: 70%;
+    position: relative;
+}
+
+.targetBar {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: #dcdcdc;
+    border-radius: 6px;
+}
+
+.completedBar {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: #000;
+    border-radius: 6px;
+}
+
+.label {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    margin-top: 11px;
+}

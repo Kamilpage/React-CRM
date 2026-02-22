@@ -1,0 +1,84 @@
+.container {
+    width: 560px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.header h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #111;
+}
+
+.actions {
+    display: flex;
+    gap: 8px;
+}
+
+.actions button {
+    background: none;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    color: #555;
+}
+
+.actions button:hover {
+    color: #111;
+}
+
+.danger {
+    color: #d64545;
+}
+
+/* TAGS */
+.tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    background: #f2f2f2;
+    color: #444;
+}
+
+/* CONTENT */
+.content {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333;
+    white-space: pre-wrap;
+}
+
+/* FOOTER */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: #777;
+    margin-top: 8px;
+}
+
+.footer button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #555;
+}
+
+.footer button:hover {
+    color: #111;
+}

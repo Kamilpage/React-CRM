@@ -1,0 +1,103 @@
+.card {
+    padding: 24px;
+    border: 1px solid #e5e5e5;
+    border-radius: 14px;
+    background: #fff;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.header__inner h2{
+    font-size: 20px;
+    line-height: 120%;
+    margin-bottom: 16px;
+}
+
+.totalWrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.totalWrapper h1 {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 120%;
+}
+
+.growthBadge {
+    background: rgba(0, 200, 0, 0.12);
+    color: #009e00;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 140%;
+}
+
+.periodLabel {
+    font-size: 14px;
+    line-height: 150%;
+    color: #999;
+    margin-top: 8px;
+}
+
+.select {
+    padding: 8px 14px;
+    border: 1px solid #000;
+    border-radius: 8px;
+    background: #fff;
+    cursor: pointer;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px 20px;
+    margin-top: 20px;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.row__inner{
+    display: flex;
+}
+
+.label {
+    flex: 1;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 140%;
+    margin-bottom: 8px;
+}
+
+.barWrapper {
+    flex: 1;
+    background: #e0e0e0;
+    height: 16px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.barFill {
+    height: 100%;
+    background: #000;
+    border-radius: 4px;
+}
+
+.value {
+margin-left: 8px;
+    text-align: right;
+    font-size: 12px;
+    line-height: 140%;
+}

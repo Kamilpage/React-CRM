@@ -1,0 +1,12 @@
+.rightGroup {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    position: relative;
+}
+
+.vertical_line {
+    height: 34px;
+    padding-left: 1px;
+    background-color: rgba(228, 228, 228, 1);
+}

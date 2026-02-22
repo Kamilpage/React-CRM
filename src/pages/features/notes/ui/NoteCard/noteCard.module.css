@@ -1,0 +1,89 @@
+.card {
+    background: #ffffff;
+    border: 1px solid #e4e4e4;
+    border-radius: 8px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    transform: translateY(-2px);
+}
+
+/* TAGS */
+.tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+/* CONTENT */
+.title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #111;
+}
+
+.description {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #6b6b6b;
+}
+
+/* FOOTER */
+.footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: #8b8b8b;
+}
+.footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: #8b8b8b;
+}
+
+/* AUTHOR */
+.author {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.avatar {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #e4e4e4;
+}
+
+.author span {
+    font-size: 12px;
+    color: #555;
+    white-space: nowrap;
+}
+
+/* DATE */
+.date {
+    font-size: 12px;
+    color: #8b8b8b;
+    white-space: nowrap;
+}

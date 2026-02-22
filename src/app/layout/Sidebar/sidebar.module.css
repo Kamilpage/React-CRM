@@ -1,0 +1,110 @@
+.sidebar {
+    position: fixed;
+    width: 248px;
+    border-right: 2px solid rgba(228, 228, 228, 1);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    z-index: 9;
+    background-color: #ffff;
+    justify-content: space-between;
+}
+
+.sidebar__logo {
+    margin-left: 28px;
+    margin-top: 22px;
+    margin-bottom: 4px;
+
+}
+
+
+.sidebar__heading {
+    margin-left: 24px;
+    margin-bottom: 5px;
+    padding: 4px 0;
+}
+
+.sidebar__heading h2 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 140%;
+    color: rgba(114, 114, 114, 1);
+}
+
+.sidebar__option {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 24px;
+}
+
+.sidebar__option h2 {
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: 0;
+}
+
+.options__block {
+    padding-bottom: 4px;
+    cursor: pointer;
+
+}
+
+.options__block button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+
+}
+
+.options__block:last-child {
+    padding-bottom: 0;
+}
+
+.sidebar__foot {
+}
+
+
+.sidebar__foot__inner {
+    display: flex;
+    margin-left: 16px;
+    gap: 12px;
+    padding: 20px 0;
+
+}
+
+.sidebar__foot__inner p {
+    font-size: 14px;
+    line-height: 100%;
+    padding: 8px 10px;
+    background-color: rgba(242, 242, 242, 1);
+}
+
+.sidebar__foot__inner h2 {
+    font-size: 16px;
+    line-height: 150%;
+    margin-right: 6px;
+
+}
+
+.options__block:hover {
+    background-color: rgba(242, 242, 242, 1);
+    color: black;
+    stroke: black;
+}
+
+
+.sidebar__hr {
+    margin: 20px 0 20px 0;
+
+}
+
+.active {
+
+        background-color: rgba(242, 242, 242, 1);
+        color: black;
+        stroke: black;
+}

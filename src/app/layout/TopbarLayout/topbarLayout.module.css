@@ -1,0 +1,28 @@
+.tasks {
+    margin-left: 248px;
+    padding-top: 75.5px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid rgba(228, 228, 228, 1);
+}
+
+.tasks__display {
+    display: flex;
+    align-items: center;
+}
+
+.tasks__display h1 {
+    font-size: 24px;
+    line-height: 120%;
+    padding: 20.1px 36px 20.1px 28px;
+}
+
+
+.tasks__right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+
+
