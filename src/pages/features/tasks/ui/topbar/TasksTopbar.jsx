@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import React, {useState} from 'react';
+import {NavLink} from 'react-router-dom';
 
 import TopbarLayout from "../../../../../app/layout/TopbarLayout/TopbarLayout.jsx";
 import AddButton from '../../../../../shared/ui/AddButton/AddButton.jsx';
@@ -15,13 +15,13 @@ import SortFilterGroup from "../../../../../shared/ui/SortFilterGroup/SortFilter
 import {useTasks} from "../../context/TasksContext.jsx";
 
 const taskType = [
-    { name: 'List', path: '/tasks/list', Icon: ListIcon },
-    { name: 'Kanban', path: '/tasks/kanban', Icon: KanbanIcon },
-    { name: 'Table', path: '/tasks/table', Icon: TableIcon }
+    {name: 'List', path: '/tasks/list', Icon: ListIcon},
+    {name: 'Kanban', path: '/tasks/kanban', Icon: KanbanIcon},
+    {name: 'Table', path: '/tasks/table', Icon: TableIcon}
 ];
 
 
-const TasksTopbar = ({ onOpenAddModal, sortBy, setSortBy, filters, setFilters }) => {
+const TasksTopbar = ({onAddTask, sortBy, setSortBy, filters, setFilters}) => {
 
     return (
         <TopbarLayout
@@ -29,17 +29,17 @@ const TasksTopbar = ({ onOpenAddModal, sortBy, setSortBy, filters, setFilters })
                 <>
                     <h1>Task</h1>
 
-                    {taskType.map(({ name, path, Icon }) => (
+                    {taskType.map(({name, path, Icon}) => (
                         <NavLink
                             key={path}
                             to={path}
-                            className={({ isActive }) =>
+                            className={({isActive}) =>
                                 isActive ? styles.activeBtn : styles.btn
                             }
                         >
-                            {({ isActive }) => (
+                            {({isActive}) => (
                                 <div className={styles.display__type}>
-                                    <Icon active={isActive} />
+                                    <Icon active={isActive}/>
                                     <p className={isActive ? styles.activeText : ''}>
                                         {name}
                                     </p>
@@ -54,14 +54,14 @@ const TasksTopbar = ({ onOpenAddModal, sortBy, setSortBy, filters, setFilters })
                 <>
                     <SortFilterGroup
                         sortItems={[
-                            { value: "created", label: "Created" },
-                            { value: "due", label: "Due date" },
-                            { value: "title", label: "Title (A–Z)" }
+                            {value: "created", label: "Created"},
+                            {value: "due", label: "Due date"},
+                            {value: "title", label: "Title (A–Z)"}
                         ]}
                         filterItems={[
-                            { value: "tag1", label: "Priority" },
-                            { value: "tag2", label: "Bug" },
-                            { value: "tag3", label: "Feature" }
+                            {value: "tag1", label: "Priority"},
+                            {value: "tag2", label: "Bug"},
+                            {value: "tag3", label: "Feature"}
                         ]}
                         activeSort={sortBy}
                         activeFilters={filters}
@@ -71,10 +71,7 @@ const TasksTopbar = ({ onOpenAddModal, sortBy, setSortBy, filters, setFilters })
 
                     <div className={styles.vertical_line}></div>
 
-                    <AddButton
-                        label="+ Add Task"
-                        onClick={onOpenAddModal}
-                    />
+                    <AddButton label="+ Add Task" onClick={() => onAddTask("planned")}/>
                 </>
             }
         />

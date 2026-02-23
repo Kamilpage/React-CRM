@@ -1,0 +1,126 @@
+.listItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #e5e7eb;
+    padding: 12px 14px;
+    border-radius: 8px;
+    transition: background 0.1s;
+}
+
+.listItem:hover {
+    background: #f9fafb;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.title {
+    font-size: 15px;
+    font-weight: 500;
+    color: #111827;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+/* Tags row */
+.tags {
+    display: flex;
+    gap: 6px;
+}
+
+/* Base tag style */
+.tag {
+    font-size: 11px;
+    padding: 3px 6px;
+    border-radius: 4px;
+    font-weight: 500;
+    border: 1px solid;
+    text-transform: capitalize;
+}
+
+/* Tag colors */
+.tag_Marketing {
+    background: #eef2ff;
+    color: #4338ca;
+    border-color: #c7d2fe;
+}
+
+.tag_Urgent {
+    background: #fee2e2;
+    color: #b91c1c;
+    border-color: #fecaca;
+}
+
+.tag_Internal {
+    background: #ecfdf5;
+    color: #065f46;
+    border-color: #a7f3d0;
+}
+
+.tag_Event {
+    background: #fff7ed;
+    color: #c2410c;
+    border-color: #fed7aa;
+}
+
+.tag_Report {
+    background: #eff6ff;
+    color: #1d4ed8;
+    border-color: #bfdbfe;
+}
+
+.tag_Document {
+    background: #fefce8;
+    color: #a16207;
+    border-color: #fef9c3;
+}
+
+/* Due date */
+.dueDate {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.iconCalendar {
+    width: 14px;
+    height: 14px;
+    background: url('/icons/calendar.svg') center/contain no-repeat;
+}
+
+/* Assignee avatars */
+.assignees {
+    display: flex;
+}
+
+.avatar {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    margin-left: -6px;
+}
+
+/* Menu button */
+.menuBtn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: #6b7280;
+    padding: 4px;
+}
+
+.menuBtn:hover {
+    color: #374151;
+}

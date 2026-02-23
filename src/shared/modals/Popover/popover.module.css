@@ -1,0 +1,40 @@
+.popover {
+    position: absolute;
+    min-width: 160px;
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 6px 0;
+
+    box-shadow:
+            0px 12px 32px rgba(0,0,0,0.08),
+            0px 4px 12px rgba(0,0,0,0.06);
+
+    border: 1px solid #e5e7eb;
+
+    display: flex;
+    flex-direction: column;
+    z-index: 9999;
+}
+
+.popover button {
+    padding: 8px 12px;
+    background: none;
+    border: none;
+    text-align: left;
+    font-size: 14px;
+    color: #374151;
+    cursor: pointer;
+    transition: background 0.1s ease;
+}
+
+.popover button:hover {
+    background: #f3f4f6;
+}
+
+.popover button.danger {
+    color: #b91c1c;
+}
+
+.popover button.danger:hover {
+    background: #fee2e2;
+}

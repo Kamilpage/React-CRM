@@ -1,0 +1,66 @@
+.listSection {
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    padding: 16px 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    gap: 8px;
+}
+
+.count {
+    font-size: 13px;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+.statusDot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+/* Состояния статусов (через модульный подход) */
+.statusDot_planned {
+    background: #3b82f6;
+}
+
+.statusDot_upcoming {
+    background: #16a34a;
+}
+
+.statusDot_completed {
+    background: #9ca3af;
+}
+
+.createTaskBtn {
+    background: #f3f4f6;
+    border: 1px solid #d1d5db;
+    color: #374151;
+    font-size: 14px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.createTaskBtn:hover {
+    background: #e5e7eb;
+}
+
+.tasks {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}

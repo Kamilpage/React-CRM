@@ -10,7 +10,7 @@
 .kanban__type {
     padding: 20px;
     border: 1px solid rgba(228, 228, 228, 1);
-    width: 360px;
+    width: 100%;
     display: flex;
     flex-direction: column;
 }

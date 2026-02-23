@@ -1,3 +1,4 @@
+import React from 'react';
 import { useDroppable } from '@dnd-kit/core';
 import { SortableContext, verticalListSortingStrategy } from '@dnd-kit/sortable';
 import TaskCard from '../TaskCard/TaskCard.jsx';
@@ -5,7 +6,7 @@ import styles from './kanbanBoard.module.css';
 
 const KanbanColumn = ({ col, onAddTask }) => {
     const { setNodeRef } = useDroppable({
-        id: col.id,
+        id: `column-${col.id}`,
         data: {
             type: 'column',
             columnId: col.id,
@@ -31,7 +32,7 @@ const KanbanColumn = ({ col, onAddTask }) => {
 
             <button
                 type="button"
-                onClick={() => onAddTask(col.id)}
+                onClick={onAddTask}
                 className={styles.createBtn}
             >
                 + Create Task
