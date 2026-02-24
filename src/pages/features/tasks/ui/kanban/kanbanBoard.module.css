@@ -148,6 +148,6 @@
 }
 
 .kanban__planned {
-    min-height: 120px; /* КРИТИЧЕСКИ ВАЖНО */
+    min-height: 120px;
     padding: 8px;
 }

@@ -9,7 +9,7 @@ export const activitySummary = {
         total: 68,
         growth: {
             value: 12,
-            direction: 'up', // up | down
+            direction: 'up', 
         },
         period: 'month',
     },

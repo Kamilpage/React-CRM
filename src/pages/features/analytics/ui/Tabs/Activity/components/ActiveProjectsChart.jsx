@@ -50,9 +50,9 @@ const ActiveProjectsChart = ({ data }) => {
 
                 <div className={styles.filters}>
 
-                    {/* Диапазон дат (пока статический, нативный select) */}
+                    {}
                     <CustomSelect
-                        value={dateRange}             // строка
+                        value={dateRange}             
                         options={[
                             "January 2023 — December 2023",
                             "2022 — 2023"
@@ -60,16 +60,16 @@ const ActiveProjectsChart = ({ data }) => {
                         onChange={setDateRange}
                     />
 
-                    {/* ПЕРИОД (Month/Year) */}
+                    {}
                     <CustomSelect
-                        value={state.period}          // строка
+                        value={state.period}          
                         options={["month", "year"]}
                         onChange={(v) => dispatch({ type: "SET_PERIOD", payload: v })}
                     />
                 </div>
             </div>
 
-            {/* График */}
+            {}
             <div className={styles.chartWrapper}>
                 <ResponsiveContainer width="100%" height={260}>
                     <LineChart data={chartData}>

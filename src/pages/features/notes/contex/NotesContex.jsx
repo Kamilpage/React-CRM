@@ -15,7 +15,7 @@ const STORAGE_KEY = "notes";
 export const NotesProvider = ({ children }) => {
     const { query } = useSearch();
 
-    /* 🔹 source of truth */
+    
     const [notes, setNotes] = useState(() => {
         try {
             const stored = localStorage.getItem(STORAGE_KEY);
@@ -25,12 +25,12 @@ export const NotesProvider = ({ children }) => {
         }
     });
 
-    /* 🔹 persist raw notes */
+    
     useEffect(() => {
         localStorage.setItem(STORAGE_KEY, JSON.stringify(notes));
     }, [notes]);
 
-    /* 🔹 shared search / filter / sort logic */
+    
     const {
         items: processedNotes,
         sortBy,
@@ -55,7 +55,7 @@ export const NotesProvider = ({ children }) => {
         }
     });
 
-    /* 🔹 CRUD */
+    
     const addNote = (note) => {
         setNotes(prev => [note, ...prev]);
     };

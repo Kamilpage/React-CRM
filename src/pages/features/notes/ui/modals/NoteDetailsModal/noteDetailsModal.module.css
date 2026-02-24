@@ -5,7 +5,7 @@
     gap: 16px;
 }
 
-/* HEADER */
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -39,7 +39,7 @@
     color: #d64545;
 }
 
-/* TAGS */
+
 .tags {
     display: flex;
     gap: 8px;
@@ -54,7 +54,7 @@
     color: #444;
 }
 
-/* CONTENT */
+
 .content {
     font-size: 14px;
     line-height: 1.6;
@@ -62,7 +62,7 @@
     white-space: pre-wrap;
 }
 
-/* FOOTER */
+
 .footer {
     display: flex;
     justify-content: space-between;

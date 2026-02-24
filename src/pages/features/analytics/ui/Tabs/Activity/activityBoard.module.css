@@ -8,7 +8,7 @@
     padding: 32px;
 }
 
-/* Левая колонка — 4 из 12 */
+
 .leftColumn {
     grid-column: span 4;
     display: flex;
@@ -20,7 +20,7 @@
     grid-column: span 8;
 }
 
-/* Вторая строка */
+
 .activity > :nth-child(3) {
     grid-column: span 6;
 }

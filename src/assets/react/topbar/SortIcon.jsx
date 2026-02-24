@@ -4,7 +4,7 @@ const SortIcon = () => {
     return (
         <>
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                 xmlns="http://www.w3.org/2000/svg">
+                 xmlns="http:
                 <path d="M4 8H12" stroke="#727272" strokeWidth="1.5" strokeLinecap="round"
                       strokeLinejoin="round"/>
                 <path d="M1.5 5H14.5" stroke="#727272" strokeWidth="1.5" strokeLinecap="round"

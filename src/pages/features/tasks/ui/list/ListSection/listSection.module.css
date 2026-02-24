@@ -32,7 +32,7 @@
     border-radius: 50%;
 }
 
-/* Состояния статусов (через модульный подход) */
+
 .statusDot_planned {
     background: #3b82f6;
 }

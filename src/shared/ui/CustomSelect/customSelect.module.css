@@ -29,13 +29,13 @@
     border-radius: 50%;
 }
 
-/* Arrow rotate */
+
 .arrowUp {
     transform: rotate(180deg);
     transition: transform 0.15s ease;
 }
 
-/* Portal dropdown */
+
 .menu {
     background: #fff;
     border: 1px solid #e5e5e5;

@@ -17,7 +17,7 @@ const CompanyCategoriesChart = () => {
         setCompaniesCategory,
     } = useDashboard();
 
-    // считаем данные
+    
     const data = COMPANY_CATEGORIES.map((cat) => ({
         ...cat,
         value: companies.filter(

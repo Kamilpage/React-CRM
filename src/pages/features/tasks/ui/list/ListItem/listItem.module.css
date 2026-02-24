@@ -30,13 +30,13 @@
     gap: 14px;
 }
 
-/* Tags row */
+
 .tags {
     display: flex;
     gap: 6px;
 }
 
-/* Base tag style */
+
 .tag {
     font-size: 11px;
     padding: 3px 6px;
@@ -46,7 +46,7 @@
     text-transform: capitalize;
 }
 
-/* Tag colors */
+
 .tag_Marketing {
     background: #eef2ff;
     color: #4338ca;
@@ -83,7 +83,7 @@
     border-color: #fef9c3;
 }
 
-/* Due date */
+
 .dueDate {
     display: flex;
     align-items: center;
@@ -98,7 +98,7 @@
     background: url('/icons/calendar.svg') center/contain no-repeat;
 }
 
-/* Assignee avatars */
+
 .assignees {
     display: flex;
 }
@@ -111,7 +111,7 @@
     margin-left: -6px;
 }
 
-/* Menu button */
+
 .menuBtn {
     background: transparent;
     border: none;

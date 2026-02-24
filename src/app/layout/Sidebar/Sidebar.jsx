@@ -33,7 +33,7 @@ const Sidebar = () => {
                         {section.items.map(item => {
                             const Icon = item.icon;
 
-                            // Пункт Notifications — рендер кнопки
+                            
                             if (item.action === 'openNotifications') {
                                 return (
                                     <div key={item.label} className={styles.options__block}>
@@ -48,7 +48,7 @@ const Sidebar = () => {
                                 );
                             }
 
-                            // Остальные пункты — обычные страницы
+                            
                             return (
                                 <div key={item.path} className={styles.options__block}>
                                     <NavLink

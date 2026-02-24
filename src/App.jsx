@@ -32,12 +32,12 @@ function App() {
 
                 <Routes>
 
-                    {/* Dashboard */}
+                    {}
                     <Route path="/dashboard" element={<DashboardLayout />}>
                         <Route index element={<Dashboard />} />
                     </Route>
 
-                    {/* Tasks */}
+                    {}
                     <Route path="/tasks" element={<TasksLayout />}>
                         <Route index element={<Navigate to="kanban" replace />} />
                         <Route path="kanban" element={<KanbanBoard />} />
@@ -45,12 +45,12 @@ function App() {
                         <Route path="table" element={<TableView />} />
                     </Route>
 
-                    {/* Notes */}
+                    {}
                     <Route path="/notes" element={<NotesLayout />}>
                         <Route index element={<NotesGrid />} />
                     </Route>
 
-                    {/* Analytics */}
+                    {}
                     <Route path="/analytics" element={<AnalyticsLayout />}>
                         <Route index element={<Navigate to="activity" replace />} />
                         <Route path="activity" element={<ActivityBoard />} />

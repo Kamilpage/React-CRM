@@ -5,7 +5,7 @@ import { useState, useRef, useEffect } from 'react';
 import AlertModal from "../../../../../../shared/modals/AlertModal/AlertModal.jsx";
 
 const TaskDetailsModal = ({ task, columnId, isOpen, onClose }) => {
-    const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5 MB
+    const MAX_FILE_SIZE = 5 * 1024 * 1024; 
 
     const ALLOWED_TYPES = [
         'application/pdf',
@@ -29,7 +29,7 @@ const TaskDetailsModal = ({ task, columnId, isOpen, onClose }) => {
         setTimeout(() => {
             addAttachment(columnId, task.id, file);
             setIsUploading(false);
-        }, 800); // 0.8 сек — ощущение сервера
+        }, 800); 
     };
     useEffect(() => {
         if (!commentsEndRef.current) return;
@@ -91,7 +91,7 @@ const TaskDetailsModal = ({ task, columnId, isOpen, onClose }) => {
                             const file = e.target.files[0];
                             if (!file) return;
 
-                            // 1️⃣ Проверка количества
+                            
                             if (task.attachments.length >= 5) {
                                 setAlert({
                                     isOpen: true,
@@ -102,7 +102,7 @@ const TaskDetailsModal = ({ task, columnId, isOpen, onClose }) => {
                                 return;
                             }
 
-                            // 2️⃣ Проверка размера
+                            
                             if (file.size > MAX_FILE_SIZE) {
                                 setAlert({
                                     isOpen: true,
@@ -113,7 +113,7 @@ const TaskDetailsModal = ({ task, columnId, isOpen, onClose }) => {
                                 return;
                             }
 
-                            // 3️⃣ Проверка типа
+                            
                             if (!ALLOWED_TYPES.includes(file.type)) {
                                 setAlert({
                                     isOpen: true,
@@ -124,7 +124,7 @@ const TaskDetailsModal = ({ task, columnId, isOpen, onClose }) => {
                                 return;
                             }
 
-                            // 4️⃣ Имитация загрузки
+                            
                             simulateUpload(file);
                             e.target.value = '';
                         }}

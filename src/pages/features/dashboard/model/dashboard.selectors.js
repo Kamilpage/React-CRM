@@ -1,7 +1,7 @@
 export const getFilteredPeople = (people, search, sort) => {
     let result = [...people];
 
-    // Поиск по имени, email, телефону
+    
     if (search.trim() !== '') {
         const q = search.toLowerCase();
         result = result.filter(
@@ -12,7 +12,7 @@ export const getFilteredPeople = (people, search, sort) => {
         );
     }
 
-    // Сортировка
+    
     if (sort.field) {
         result.sort((a, b) => {
             const fa = a[sort.field]?.toLowerCase?.() || a[sort.field];

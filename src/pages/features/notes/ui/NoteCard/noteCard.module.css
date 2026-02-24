@@ -15,7 +15,7 @@
     transform: translateY(-2px);
 }
 
-/* TAGS */
+
 .tags {
     display: flex;
     gap: 8px;
@@ -29,7 +29,7 @@
     font-weight: 500;
 }
 
-/* CONTENT */
+
 .title {
     font-size: 16px;
     font-weight: 600;
@@ -42,7 +42,7 @@
     color: #6b6b6b;
 }
 
-/* FOOTER */
+
 .footer {
     margin-top: auto;
     display: flex;
@@ -60,7 +60,7 @@
     color: #8b8b8b;
 }
 
-/* AUTHOR */
+
 .author {
     display: flex;
     align-items: center;
@@ -81,7 +81,7 @@
     white-space: nowrap;
 }
 
-/* DATE */
+
 .date {
     font-size: 12px;
     color: #8b8b8b;

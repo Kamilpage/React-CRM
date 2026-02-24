@@ -1,4 +1,4 @@
-// Models (static data until backend)
+
 import { activityChartData } from '../model/analytics.activity.chart';
 import { activitySummary } from '../model/analytics.activity.model';
 import { topCompanies } from '../model/analytics.topCompanies';
@@ -14,10 +14,10 @@ export const initialState = {
     tab: 'activity',
     period: 'month',
 
-    // связь с CompaniesTable
+    
     selectedCompanyId: null,
 
-    // данные (имитация API)
+    
     activityChartData,
     activitySummary,
     topCompanies,
@@ -47,9 +47,9 @@ export function analyticsReducer(state, action) {
 }
 
 
-// ---------------------------
-// Context + Provider
-// ---------------------------
+
+
+
 
 const AnalyticsContext = createContext(null);
 
@@ -66,9 +66,9 @@ export function AnalyticsProvider({ children }) {
 }
 
 
-// ---------------------------
-// Hook
-// ---------------------------
+
+
+
 
 export function useAnalytics() {
     const ctx = useContext(AnalyticsContext);

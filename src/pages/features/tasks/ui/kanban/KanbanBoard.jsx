@@ -21,7 +21,7 @@ const KanbanBoard = () => {
 
         if (!fromColumn || !toColumn) return;
 
-        // правила статусов
+        
         if (!canMove(fromColumn, toColumn)) return;
 
         moveTask(fromColumn, toColumn, active.id, toIndex);

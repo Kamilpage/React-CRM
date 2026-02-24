@@ -5,7 +5,7 @@ const KanbanIcon = ({isActive}) => {
     const strokeWidth = isActive ? 2 : 1.5;
     return (
         <>
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http:
                 <path
                     d="M8.75 10.6818V3.48485C8.75 3.28611 8.47018 3.125 8.125 3.125L5 3.125C4.65482 3.125 4.375 3.28611 4.375 3.48485L4.375 10.6818C4.375 10.8806 4.65482 11.0417 5 11.0417H8.125C8.47018 11.0417 8.75 10.8806 8.75 10.6818Z"
                     stroke={strokeColor}

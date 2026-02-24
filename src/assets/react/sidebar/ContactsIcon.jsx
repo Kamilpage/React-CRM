@@ -3,7 +3,7 @@ import React from 'react';
 const ContactsIcon = ({isActive}) => {
     return (
         <>
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http:
                 <path
                     d="M10.625 11.25C12.0057 11.25 13.125 10.1307 13.125 8.75C13.125 7.36929 12.0057 6.25 10.625 6.25C9.24429 6.25 8.125 7.36929 8.125 8.75C8.125 10.1307 9.24429 11.25 10.625 11.25Z"
                     stroke="#727272" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>

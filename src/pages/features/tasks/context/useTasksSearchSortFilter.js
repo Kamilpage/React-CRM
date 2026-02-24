@@ -1,11 +1,11 @@
-// src/pages/features/tasks/hooks/useTasksSearchSortFilter.js
+
 import { useMemo, useState } from "react";
 
 export function useTasksSearchSortFilter(flatTasks, searchQuery) {
     const [filters, setFilters] = useState([]);
     const [sortKey, setSortKey] = useState(null);
 
-    // 🔍 поиск
+    
     const searched = useMemo(() => {
         if (!searchQuery) return flatTasks;
 
@@ -15,7 +15,7 @@ export function useTasksSearchSortFilter(flatTasks, searchQuery) {
         );
     }, [flatTasks, searchQuery]);
 
-    // 🏷 фильтрация по тегам
+    
     const filtered = useMemo(() => {
         if (!filters.length) return searched;
 
@@ -24,7 +24,7 @@ export function useTasksSearchSortFilter(flatTasks, searchQuery) {
         );
     }, [searched, filters]);
 
-    // ↕ сортировка
+    
     const sorted = useMemo(() => {
         if (!sortKey) return filtered;
 
