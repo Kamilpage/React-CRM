@@ -2,29 +2,32 @@ import {
     BarChart,
     Bar,
     XAxis,
+    YAxis,
     Tooltip,
+    CartesianGrid,
     ResponsiveContainer,
 } from 'recharts';
 
-import {useDashboard} from '../../context/DashboardContext.jsx';
+import { useDashboard } from '../../context/DashboardContext.jsx';
 import styles from './emailChart.module.css';
 
-const CustomTooltip = ({active, payload}) => {
+const CustomTooltip = ({ active, payload }) => {
     if (!active || !payload?.length) return null;
     const data = payload[0].payload;
 
     return (
         <div className={styles.tooltip}>
-            <div className={styles.tooltipTitle}>
-                {data.month || data.year}
+            <div className={styles.tooltipTitle}>{data.month || data.year}</div>
+
+            <div className={styles.tooltipBlock}>
+                <span className={styles.tooltipLabel}>Open Rate</span>
+                <span className={styles.tooltipValue}>{data.value}%</span>
             </div>
-            <div className={styles.tooltipValue}>
-                Open Rate {data.value}%
-            </div>
+
+            <div className={styles.arrow} />
         </div>
     );
 };
-
 const EmailOpenRateChart = () => {
     const {
         emailMonth,
@@ -70,27 +73,42 @@ const EmailOpenRateChart = () => {
             <div className={styles.chartWrapper}>
                 <ResponsiveContainer width="100%" height={260}>
                     <BarChart data={data}>
-                        <XAxis dataKey={dataKey} tickLine={false} axisLine={false} dy={16}
+                        <CartesianGrid
+                            strokeDasharray="4 4"
+                            vertical={false}
+                            stroke="#e5e5e5"
+                        />
+
+                        <YAxis
+                            tickLine={false}
+                            axisLine={false}
+                            tick={{ fontSize: 12, fill: "#727272" }}
+                            ticks={[0, 25, 50, 75, 100]}
+                            domain={[0, 100]}
+                            tickFormatter={(v) => `${v}%`}
+                            dx={-5}
+                        />
+
+                        <XAxis
+                            dataKey={dataKey}
+                            tickLine={false}
+                            axisLine={false}
+                            dy={12}
+                            tick={{ fontSize: 12, fill: "#727272" }}
                         />
 
                         <Tooltip
                             content={(props) => <CustomTooltip {...props} />}
-                            cursor={{fill: 'transparent'}}
-                            wrapperStyle={{transition: 'none'}}
+                            cursor={{ fill: 'transparent' }}
+                            wrapperStyle={{ transition: 'none' }}
                             isAnimationActive={false}
-                            allowEscapeViewBox={{x: true, y: true}}
-                        />
-                        <Bar
-                            dataKey="value"
-                            radius={[4, 4, 0, 0]}
-                            fill="#ddd"
                         />
 
                         <Bar
                             dataKey="value"
-                            data={data.filter((d) => d.active)}
-                            radius={[4, 4, 0, 0]}
-                            fill="#000"
+                            radius={[6, 6, 0, 0]}
+                            fill="#d9d9d9"
+                            className={styles.bar}
                         />
                     </BarChart>
                 </ResponsiveContainer>
