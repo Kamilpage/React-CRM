@@ -1,5 +1,5 @@
 import UpcomingAgenda from '../Agenda/UpcomingAgenda';
-import EmailOpenRateChart from '../Charts/EmailOpenRateChart';
+import EmailOpenRateChart from '../EmailRate/EmailOpenRateChart.jsx';
 import styles from './overviewSection.module.css';
 
 const OverviewSection = () => {

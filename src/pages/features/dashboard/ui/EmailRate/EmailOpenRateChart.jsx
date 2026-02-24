@@ -6,7 +6,7 @@ import {
     ResponsiveContainer,
 } from 'recharts';
 
-import { useDashboard } from '../../context/DashboardContext';
+import { useDashboard } from '../../context/DashboardContext.jsx';
 import styles from './emailChart.module.css';
 
 const CustomTooltip = ({ active, payload }) => {
@@ -72,8 +72,13 @@ const EmailOpenRateChart = () => {
                     <BarChart data={data}>
                         <XAxis dataKey={dataKey} tickLine={false} axisLine={false} />
 
-                        <Tooltip content={<CustomTooltip />} cursor={{ fill: 'transparent' }} />
-
+                        <Tooltip
+                            content={(props) => <CustomTooltip {...props} />}
+                            cursor={{ fill: 'transparent' }}
+                            wrapperStyle={{ transition: 'none' }}
+                            isAnimationActive={false}
+                            allowEscapeViewBox={{ x: true, y: true }}
+                        />
                         <Bar
                             dataKey="value"
                             radius={[4, 4, 0, 0]}
