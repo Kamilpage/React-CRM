@@ -15,7 +15,7 @@ const TopCompaniesCard = ({ companies }) => {
                         {/* Лого + Название */}
                         <div className={styles.company}>
                             <img
-                                src={`/logos/${item.logo}`}
+                                src={item.logo}
                                 alt={item.name}
                                 className={styles.logo}
                             />

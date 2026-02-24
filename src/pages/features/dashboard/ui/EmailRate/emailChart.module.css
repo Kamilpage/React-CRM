@@ -76,6 +76,7 @@
 .bar:hover {
     fill: #000;
     transition: 0.15s ease;
+    cursor: pointer;
 }
 
 .tooltip {

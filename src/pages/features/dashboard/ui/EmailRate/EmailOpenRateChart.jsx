@@ -82,7 +82,7 @@ const EmailOpenRateChart = () => {
                         <YAxis
                             tickLine={false}
                             axisLine={false}
-                            tick={{ fontSize: 12, fill: "#727272" }}
+                            tick={{ fontSize: 16, fill: "#000000" }}
                             ticks={[0, 25, 50, 75, 100]}
                             domain={[0, 100]}
                             tickFormatter={(v) => `${v}%`}
@@ -94,7 +94,7 @@ const EmailOpenRateChart = () => {
                             tickLine={false}
                             axisLine={false}
                             dy={12}
-                            tick={{ fontSize: 12, fill: "#727272" }}
+                            tick={{ fontSize: 16, fill: "#000000" }}
                         />
 
                         <Tooltip
