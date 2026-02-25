@@ -11,7 +11,6 @@ import {
 
 import styles from "./activeProjectsChart.module.css";
 import { useAnalytics } from "../../../../contex/AnalyticsContext.jsx";
-import CustomSelect from "../../../../../../../shared/ui/CustomSelect/CustomSelect.jsx";
 
 const ActiveProjectsChart = ({ data }) => {
     const { state, dispatch } = useAnalytics();
@@ -49,23 +48,25 @@ const ActiveProjectsChart = ({ data }) => {
                 </div>
 
                 <div className={styles.filters}>
+                    <select
+                        value={dateRange}
+                        onChange={(e) => setDateRange(e.target.value)}
+                        className={styles.select}
+                    >
+                        <option>January 2023 — December 2023</option>
+                        <option>2022 — 2023</option>
+                    </select>
 
-                    {/* Диапазон дат (пока статический, нативный select) */}
-                    <CustomSelect
-                        value={dateRange}             // строка
-                        options={[
-                            "January 2023 — December 2023",
-                            "2022 — 2023"
-                        ]}
-                        onChange={setDateRange}
-                    />
-
-                    {/* ПЕРИОД (Month/Year) */}
-                    <CustomSelect
-                        value={state.period}          // строка
-                        options={["month", "year"]}
-                        onChange={(v) => dispatch({ type: "SET_PERIOD", payload: v })}
-                    />
+                    <select
+                        value={state.period}
+                        onChange={(e) =>
+                            dispatch({ type: "SET_PERIOD", payload: e.target.value })
+                        }
+                        className={styles.select}
+                    >
+                        <option value="month">Month</option>
+                        <option value="year">Year</option>
+                    </select>
                 </div>
             </div>
 

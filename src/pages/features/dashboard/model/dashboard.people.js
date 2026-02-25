@@ -1,3 +1,10 @@
+import avatar1 from '../../../../assets/icons/contacts/display picture-1.svg';
+import avatar2 from '../../../../assets/icons/contacts/display picture-2.svg';
+import avatar3 from '../../../../assets/icons/contacts/display picture-3.svg';
+import avatar4 from '../../../../assets/icons/contacts/display picture-4.svg';
+import avatar5 from '../../../../assets/icons/contacts/display picture.svg';
+
+
 export const DASHBOARD_PEOPLE = [
     {
         id: 1,
@@ -9,7 +16,7 @@ export const DASHBOARD_PEOPLE = [
         categoryTextColor: '#2196f3',
         location: 'Austin',
         gender: 'Male',
-        avatar: '/assets/avatars/robert.png'
+        avatar: avatar1
     },
     {
         id: 2,
@@ -21,7 +28,7 @@ export const DASHBOARD_PEOPLE = [
         categoryTextColor: '#2196f3',
         location: 'Orange',
         gender: 'Male',
-        avatar: '/assets/avatars/cody.png'
+        avatar: avatar2
     },
     {
         id: 3,
@@ -33,7 +40,7 @@ export const DASHBOARD_PEOPLE = [
         categoryTextColor: '#2196f3',
         location: 'Pembrook Pines',
         gender: 'Female',
-        avatar: '/assets/avatars/albert.png'
+        avatar: avatar3
     },
     {
         id: 4,
@@ -45,7 +52,7 @@ export const DASHBOARD_PEOPLE = [
         categoryTextColor: '#2196f3',
         location: 'Fairfield',
         gender: 'Male',
-        avatar: '/assets/avatars/floyd.png'
+        avatar: avatar4
     },
     {
         id: 5,
@@ -57,6 +64,6 @@ export const DASHBOARD_PEOPLE = [
         categoryTextColor: '#ffb300',
         location: 'Toledo',
         gender: 'Female',
-        avatar: '/assets/avatars/arlene.png'
+        avatar: avatar5
     }
 ];

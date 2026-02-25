@@ -19,6 +19,8 @@ import {NotificationsProvider} from "./pages/features/notifications/context/Noti
 import NotificationsModal from "./pages/features/notifications/modal/NotificationsModal.jsx";
 import TableView from "./pages/features/tasks/ui/table/TableView.jsx";
 import {ListView} from "./pages/features/tasks/ui/list/ListView/ListView.jsx";
+import ContactsLayout from "./pages/features/contacts/layouts/ContactsLayout.jsx";
+import ContactsKanban from "./pages/features/contacts/views/ContactsKanban.jsx";
 
 
 function App() {
@@ -55,6 +57,13 @@ function App() {
                         <Route index element={<Navigate to="activity" replace />} />
                         <Route path="activity" element={<ActivityBoard />} />
                         <Route path="sales" element={<SalesBoard />} />
+                    </Route>
+
+                    <Route path="/contacts" element={<ContactsLayout />}>
+                    <Route index element={<Navigate to="kanban" replace />} />
+                    <Route path="kanban" element={<ContactsKanban />} />
+                    {/*<Route path="list" element={<ListView />} />*/}
+                    {/*<Route path="table" element={<TableView />} />*/}
                     </Route>
 
                 </Routes>

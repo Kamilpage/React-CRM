@@ -1,11 +1,18 @@
-import React from 'react';
+import { createContext, useContext } from "react";
+import {contactsMock} from "../model/contactsMock.model.js";
 
-const ContactsContext = () => {
+const ContactsContext = createContext(null);
+
+export const ContactsProvider = ({ children }) => {
     return (
-        <div>
-            
-        </div>
+        <ContactsContext.Provider value={contactsMock}>
+            {children}
+        </ContactsContext.Provider>
     );
 };
 
-export default ContactsContext;
+export const useContacts = () => {
+    const ctx = useContext(ContactsContext);
+    if (!ctx) throw new Error("useContacts must be used inside ContactsProvider");
+    return ctx;
+};

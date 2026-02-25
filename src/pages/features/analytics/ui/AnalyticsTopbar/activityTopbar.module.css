@@ -52,12 +52,11 @@
 .activeBtn {
     .display__type p {
         color: black;
-
     }
 }
 
 .activeText {
-    font-weight: 600;
+    font-weight: 500;
     color: #111;
 }
 

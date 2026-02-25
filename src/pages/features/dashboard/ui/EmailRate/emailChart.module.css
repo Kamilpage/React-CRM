@@ -8,7 +8,12 @@
 .header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 16px;
+}
+
+.header > div:first-child {
+    max-width: 320px;
 }
 
 .heading {
@@ -45,15 +50,17 @@
 
 .controls {
     display: flex;
-    gap: 16px;
+    gap: 8px;
 }
 
 .controls button {
-    padding: 6px 10px;
-    border-radius: 8px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    padding: 6px 12px;
+    font-size: 14px;
     border: 1px solid #ddd;
+    border-radius: 6px;
     background: #fff;
-    font-size: 12px;
     cursor: pointer;
 }
 
@@ -64,8 +71,6 @@
 .chartWrapper {
     height: 280px;
 }
-
-
 
 .activeBtn {
     background: #000;
@@ -125,3 +130,10 @@
     transform: translateX(-40%) rotate(45deg);
 
 }
+
+/**/
+
+
+
+
+

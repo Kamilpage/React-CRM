@@ -1,27 +1,31 @@
-import { useContacts } from "../context/ContactsContext";
-import { ContactCard } from "../components/ContactCard/ContactCard";
-import styles from "./kanban.module.css";
+import ContactsColumn from "./ContactsColumn";
+import styles from "./contactsKanban.module.css";
+import {useContacts} from "../context/ContactsContext.jsx";
 
-export const ContactsKanban = () => {
-    const { groups } = useContacts();
+const ContactsKanban = () => {
+    const contacts = useContacts();
 
     return (
-        <div className={styles.kanban}>
-            {groups.map(group => (
-                <div key={group.id} className={styles.column}>
-                    <div className={styles.columnHeader}>
-                        <span className={styles.title}>{group.title}</span>
-                        <span className={styles.count}>{group.contacts.length}</span>
-                    </div>
+        <div className={styles.wrapper}>
+            <ContactsColumn
+                title="Customers"
+                items={contacts.customers}
+                color="#4F46E5"
+            />
 
-                    <div className={styles.cards}>
-                        {group.contacts.map(c => (
-                            <ContactCard key={c.id} contact={c} groupId={group.id} />
-                        ))}
-                    </div>
-                </div>
-            ))}
+            <ContactsColumn
+                title="Employee"
+                items={contacts.employees}
+                color="#7C3AED"
+            />
+
+            <ContactsColumn
+                title="Partners"
+                items={contacts.partners}
+                color="#F59E0B"
+            />
         </div>
-
     );
 };
+
+export default ContactsKanban;

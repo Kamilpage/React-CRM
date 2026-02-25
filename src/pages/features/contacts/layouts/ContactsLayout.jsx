@@ -1,16 +1,18 @@
-import styles from "./contactsLayout.module.css";
-import { Outlet } from "react-router-dom";
+import React from 'react';
+import {ContactsProvider} from "../context/ContactsContext.jsx";
+import ContactsTopbar from "../ui/ContactsTopbar/ContactsTopbar.jsx";
+import {Outlet} from "react-router-dom";
 
-export const ContactsLayout = () => {
+const ContactsLayout = () => {
     return (
-        <div className={styles.wrapper}>
-            <div className={styles.topbar}>
-                <h1>Contacts</h1>
-
-                <button className={styles.addBtn}>+ Add Contact</button>
-            </div>
-
-            <Outlet />
-        </div>
+        <>
+            <ContactsProvider>
+                <ContactsTopbar/>
+                <Outlet/>
+            </ContactsProvider>
+            
+        </>
     );
 };
+
+export default ContactsLayout;
