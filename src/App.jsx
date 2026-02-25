@@ -20,7 +20,10 @@ import NotificationsModal from "./pages/features/notifications/modal/Notificatio
 import TableView from "./pages/features/tasks/ui/table/TableView.jsx";
 import {ListView} from "./pages/features/tasks/ui/list/ListView/ListView.jsx";
 import ContactsLayout from "./pages/features/contacts/layouts/ContactsLayout.jsx";
-import ContactsKanban from "./pages/features/contacts/views/ContactsKanban.jsx";
+import ContactsKanban from "./pages/features/contacts/ui/kanban/ContactsKanban.jsx";
+import ContactsList from "./pages/features/contacts/ui/list/ContactsList.jsx";
+import ContactsTable from "./pages/features/contacts/ui/table/ContactsTable.jsx";
+import ContactsGrid from "./pages/features/contacts/ui/grid/ContactsGrid.jsx";
 
 
 function App() {
@@ -62,8 +65,10 @@ function App() {
                     <Route path="/contacts" element={<ContactsLayout />}>
                     <Route index element={<Navigate to="kanban" replace />} />
                     <Route path="kanban" element={<ContactsKanban />} />
-                    {/*<Route path="list" element={<ListView />} />*/}
-                    {/*<Route path="table" element={<TableView />} />*/}
+                    <Route path="list" element={<ContactsList />} />
+                    <Route path="table" element={<ContactsTable />} />
+                        <Route path="grid" element={<ContactsGrid />} />
+
                     </Route>
 
                 </Routes>

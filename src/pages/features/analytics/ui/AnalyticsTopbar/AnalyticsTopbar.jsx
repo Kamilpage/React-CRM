@@ -3,7 +3,6 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import styles from './activityTopbar.module.css'
 import TopbarLayout from "../../../../../app/layout/TopbarLayout/TopbarLayout.jsx";
-import {selectTab, useAnalyticsSelector} from "../../contex/analytics.selectors.js";
 import {useAnalytics} from "../../contex/AnalyticsContext.jsx";
 
 const tabs = [
@@ -13,7 +12,6 @@ const tabs = [
 
 const AnalyticsTopbar = () => {
     const { dispatch } = useAnalytics();
-    const activeTab = useAnalyticsSelector(selectTab);
 
     const handleClick = (tab) => {
         dispatch({ type: 'SET_TAB', payload: tab });

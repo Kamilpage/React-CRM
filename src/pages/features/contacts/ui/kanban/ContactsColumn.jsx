@@ -1,4 +1,4 @@
-import ContactCard from "./ContactCard";
+import ContactCard from "./ContactCard.jsx";
 import styles from "./contactsColumn.module.css";
 
 const ContactsColumn = ({ title, items, color }) => {

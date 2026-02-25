@@ -1,6 +1,6 @@
-import ContactsColumn from "./ContactsColumn";
+import ContactsColumn from "./ContactsColumn.jsx";
 import styles from "./contactsKanban.module.css";
-import {useContacts} from "../context/ContactsContext.jsx";
+import {useContacts} from "../../context/ContactsContext.jsx";
 
 const ContactsKanban = () => {
     const contacts = useContacts();

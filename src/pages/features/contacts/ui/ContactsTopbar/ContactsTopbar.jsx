@@ -7,12 +7,14 @@ import TableIcon from "../../../../../assets/react/topbar/TableIcon.jsx";
 import {NavLink} from "react-router-dom";
 import SortFilterGroup from "../../../../../shared/ui/SortFilterGroup/SortFilterGroup.jsx";
 import AddButton from "../../../../../shared/ui/AddButton/AddButton.jsx";
+import GridIcon from "../../../../../assets/react/topbar/GridIcon.jsx";
 
 const ContactsTopbar = () => {
     const contactType = [
         {name: 'List', path: '/contacts/list', Icon: ListIcon},
         {name: 'Kanban', path: '/contacts/kanban', Icon: KanbanIcon},
-        {name: 'Table', path: '/contacts/table', Icon: TableIcon}
+        {name: 'Table', path: '/contacts/table', Icon: TableIcon},
+        {name: 'Grid', path: '/contacts/grid', Icon: GridIcon},
     ];
     return (
         <div>
