@@ -11,8 +11,8 @@ export const usePopover = () => {
         const rect = triggerRef.current.getBoundingClientRect();
 
         setCoords({
-            top: rect.bottom + 6, 
-            left: rect.left - 140, 
+            top: rect.bottom + 6, // 6px вниз от кнопки
+            left: rect.left - 140, // сдвигаем меню влево (чтобы было рядом)
         });
 
         setOpen(true);
@@ -20,7 +20,7 @@ export const usePopover = () => {
 
     const closePopover = () => setOpen(false);
 
-    
+    // закрытие по клику вне
     useEffect(() => {
         if (!open) return;
 

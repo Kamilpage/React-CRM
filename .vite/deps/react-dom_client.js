@@ -6,7 +6,7 @@ import {
   require_react
 } from "./chunk-3PPUDOJL.js";
 
-
+// node_modules/scheduler/cjs/scheduler.development.js
 var require_scheduler_development = __commonJS({
   "node_modules/scheduler/cjs/scheduler.development.js"(exports) {
     "use strict";
@@ -265,7 +265,7 @@ var require_scheduler_development = __commonJS({
   }
 });
 
-
+// node_modules/scheduler/index.js
 var require_scheduler = __commonJS({
   "node_modules/scheduler/index.js"(exports, module) {
     "use strict";
@@ -277,7 +277,7 @@ var require_scheduler = __commonJS({
   }
 });
 
-
+// node_modules/react-dom/cjs/react-dom-client.development.js
 var require_react_dom_client_development = __commonJS({
   "node_modules/react-dom/cjs/react-dom-client.development.js"(exports) {
     "use strict";
@@ -332,7 +332,7 @@ var require_react_dom_client_development = __commonJS({
       }
       function warnInvalidHookAccess() {
         console.error(
-          "Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https:
+          "Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. You can only call Hooks at the top level of your React function. For more information, see https://react.dev/link/rules-of-hooks"
         );
       }
       function warnInvalidContextAccess() {
@@ -1049,7 +1049,7 @@ var require_react_dom_client_development = __commonJS({
         if (hook.isDisabled) return true;
         if (!hook.supportsFiber)
           return console.error(
-            "The installed version of React DevTools is too old and will not work with the current version of React. Please update React DevTools. https:
+            "The installed version of React DevTools is too old and will not work with the current version of React. Please update React DevTools. https://react.dev/link/react-devtools"
           ), true;
         try {
           rendererID = hook.inject(internals), injectedHook = hook;
@@ -1366,7 +1366,7 @@ var require_react_dom_client_development = __commonJS({
       }
       function getResourcesFromRoot(root2) {
         var resources = root2[internalRootNodeResourcesKey];
-        resources || (resources = root2[internalRootNodeResourcesKey] = { hoistableStyles:  new Map(), hoistableScripts:  new Map() });
+        resources || (resources = root2[internalRootNodeResourcesKey] = { hoistableStyles: /* @__PURE__ */ new Map(), hoistableScripts: /* @__PURE__ */ new Map() });
         return resources;
       }
       function markNodeAsHoistable(node) {
@@ -1573,12 +1573,12 @@ var require_react_dom_client_development = __commonJS({
       }
       function validateInputProps(element, props) {
         void 0 === props.checked || void 0 === props.defaultChecked || didWarnCheckedDefaultChecked || (console.error(
-          "%s contains an input of type %s with both checked and defaultChecked props. Input elements must be either controlled or uncontrolled (specify either the checked prop, or the defaultChecked prop, but not both). Decide between using a controlled or uncontrolled input element and remove one of these props. More info: https:
+          "%s contains an input of type %s with both checked and defaultChecked props. Input elements must be either controlled or uncontrolled (specify either the checked prop, or the defaultChecked prop, but not both). Decide between using a controlled or uncontrolled input element and remove one of these props. More info: https://react.dev/link/controlled-components",
           getCurrentFiberOwnerNameInDevOrNull() || "A component",
           props.type
         ), didWarnCheckedDefaultChecked = true);
         void 0 === props.value || void 0 === props.defaultValue || didWarnValueDefaultValue$1 || (console.error(
-          "%s contains an input of type %s with both value and defaultValue props. Input elements must be either controlled or uncontrolled (specify either the value prop, or the defaultValue prop, but not both). Decide between using a controlled or uncontrolled input element and remove one of these props. More info: https:
+          "%s contains an input of type %s with both value and defaultValue props. Input elements must be either controlled or uncontrolled (specify either the value prop, or the defaultValue prop, but not both). Decide between using a controlled or uncontrolled input element and remove one of these props. More info: https://react.dev/link/controlled-components",
           getCurrentFiberOwnerNameInDevOrNull() || "A component",
           props.type
         ), didWarnValueDefaultValue$1 = true);
@@ -1676,12 +1676,12 @@ var require_react_dom_client_development = __commonJS({
           }
         }
         void 0 === props.value || void 0 === props.defaultValue || didWarnValueDefaultValue || (console.error(
-          "Select elements must be either controlled or uncontrolled (specify either the value prop, or the defaultValue prop, but not both). Decide between using a controlled or uncontrolled select element and remove one of these props. More info: https:
+          "Select elements must be either controlled or uncontrolled (specify either the value prop, or the defaultValue prop, but not both). Decide between using a controlled or uncontrolled select element and remove one of these props. More info: https://react.dev/link/controlled-components"
         ), didWarnValueDefaultValue = true);
       }
       function validateTextareaProps(element, props) {
         void 0 === props.value || void 0 === props.defaultValue || didWarnValDefaultVal || (console.error(
-          "%s contains a textarea with both value and defaultValue props. Textarea elements must be either controlled or uncontrolled (specify either the value prop, or the defaultValue prop, but not both). Decide between using a controlled or uncontrolled textarea and remove one of these props. More info: https:
+          "%s contains a textarea with both value and defaultValue props. Textarea elements must be either controlled or uncontrolled (specify either the value prop, or the defaultValue prop, but not both). Decide between using a controlled or uncontrolled textarea and remove one of these props. More info: https://react.dev/link/controlled-components",
           getCurrentFiberOwnerNameInDevOrNull() || "A component"
         ), didWarnValDefaultVal = true);
         null != props.children && null == props.value && console.error(
@@ -1844,7 +1844,7 @@ var require_react_dom_client_development = __commonJS({
         return properties;
       }
       function describeElementDiff(type, clientProps, serverProps, indent) {
-        var content = "", serverPropNames =  new Map();
+        var content = "", serverPropNames = /* @__PURE__ */ new Map();
         for (propName$jscomp$0 in serverProps)
           serverProps.hasOwnProperty(propName$jscomp$0) && serverPropNames.set(
             propName$jscomp$0.toLowerCase(),
@@ -2331,11 +2331,11 @@ var require_react_dom_client_development = __commonJS({
           return "`" + prop + "`";
         }).join(", ");
         1 === invalidProps.length ? console.error(
-          "Invalid aria prop %s on <%s> tag. For details, see https:
+          "Invalid aria prop %s on <%s> tag. For details, see https://react.dev/link/invalid-aria-props",
           props,
           type
         ) : 1 < invalidProps.length && console.error(
-          "Invalid aria props %s on <%s> tag. For details, see https:
+          "Invalid aria props %s on <%s> tag. For details, see https://react.dev/link/invalid-aria-props",
           props,
           type
         );
@@ -2541,11 +2541,11 @@ var require_react_dom_client_development = __commonJS({
           return "`" + prop + "`";
         }).join(", ");
         1 === unknownProps.length ? console.error(
-          "Invalid value for prop %s on <%s> tag. Either remove it from the element, or pass a string or number value to keep it in the DOM. For details, see https:
+          "Invalid value for prop %s on <%s> tag. Either remove it from the element, or pass a string or number value to keep it in the DOM. For details, see https://react.dev/link/attribute-behavior ",
           props,
           type
         ) : 1 < unknownProps.length && console.error(
-          "Invalid values for props %s on <%s> tag. Either remove them from the element, or pass a string or number value to keep them in the DOM. For details, see https:
+          "Invalid values for props %s on <%s> tag. Either remove them from the element, or pass a string or number value to keep them in the DOM. For details, see https://react.dev/link/attribute-behavior ",
           props,
           type
         );
@@ -3567,7 +3567,7 @@ var require_react_dom_client_development = __commonJS({
         return needsCompareFamilies && (fiber = resolveFamily(prevType), void 0 !== fiber && fiber === resolveFamily(element)) ? true : false;
       }
       function markFailedErrorBoundaryForHotReloading(fiber) {
-        null !== resolveFamily && "function" === typeof WeakSet && (null === failedBoundaries && (failedBoundaries =  new WeakSet()), failedBoundaries.add(fiber));
+        null !== resolveFamily && "function" === typeof WeakSet && (null === failedBoundaries && (failedBoundaries = /* @__PURE__ */ new WeakSet()), failedBoundaries.add(fiber));
       }
       function scheduleFibersWithFamiliesRecursively(fiber, updatedFamilies, staleFamilies) {
         do {
@@ -3916,7 +3916,7 @@ var require_react_dom_client_development = __commonJS({
         queueHydrationError(
           createCapturedValueAtFiber(
             Error(
-              "Hydration failed because the server rendered " + (fromText ? "text" : "HTML") + " didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:\n\n- A server/client branch `if (typeof window !== 'undefined')`.\n- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.\n- Date formatting in a user's locale which doesn't match the server.\n- External changing data without sending a snapshot of it along with the HTML.\n- Invalid HTML tag nesting.\n\nIt can also happen if the client has a browser extension installed which messes with the HTML before React loaded.\n\nhttps:
+              "Hydration failed because the server rendered " + (fromText ? "text" : "HTML") + " didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:\n\n- A server/client branch `if (typeof window !== 'undefined')`.\n- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.\n- Date formatting in a user's locale which doesn't match the server.\n- External changing data without sending a snapshot of it along with the HTML.\n- Invalid HTML tag nesting.\n\nIt can also happen if the client has a browser extension installed which messes with the HTML before React loaded.\n\nhttps://react.dev/link/hydration-mismatch" + diff
             ),
             fiber
           )
@@ -4070,7 +4070,7 @@ var require_react_dom_client_development = __commonJS({
           runWithFiberInDEV(diffRoot.fiber, function() {
             console.error(
               "A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:\n\n- A server/client branch `if (typeof window !== 'undefined')`.\n- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.\n- Date formatting in a user's locale which doesn't match the server.\n- External changing data without sending a snapshot of it along with the HTML.\n- Invalid HTML tag nesting.\n\nIt can also happen if the client has a browser extension installed which messes with the HTML before React loaded.\n\n%s%s",
-              "https:
+              "https://react.dev/link/hydration-mismatch",
               diff
             );
           });
@@ -4247,7 +4247,7 @@ var require_react_dom_client_development = __commonJS({
       function createCache() {
         return {
           controller: new AbortControllerLocal(),
-          data:  new Map(),
+          data: /* @__PURE__ */ new Map(),
           refCount: 0
         };
       }
@@ -4657,7 +4657,7 @@ var require_react_dom_client_development = __commonJS({
           return null;
         }
         function mapRemainingChildren(currentFirstChild) {
-          for (var existingChildren =  new Map(); null !== currentFirstChild; )
+          for (var existingChildren = /* @__PURE__ */ new Map(); null !== currentFirstChild; )
             null !== currentFirstChild.key ? existingChildren.set(currentFirstChild.key, currentFirstChild) : existingChildren.set(currentFirstChild.index, currentFirstChild), currentFirstChild = currentFirstChild.sibling;
           return existingChildren;
         }
@@ -4911,7 +4911,7 @@ var require_react_dom_client_development = __commonJS({
               var key = child.key;
               if ("string" !== typeof key) break;
               if (null === knownKeys) {
-                knownKeys =  new Set();
+                knownKeys = /* @__PURE__ */ new Set();
                 knownKeys.add(key);
                 break;
               }
@@ -5590,7 +5590,7 @@ var require_react_dom_client_development = __commonJS({
               table += oldHookName;
             }
             console.error(
-              "React has detected a change in the order of Hooks called by %s. This will lead to bugs and errors if not fixed. For more information, read the Rules of Hooks: https:
+              "React has detected a change in the order of Hooks called by %s. This will lead to bugs and errors if not fixed. For more information, read the Rules of Hooks: https://react.dev/link/rules-of-hooks\n\n   Previous render            Next render\n   ------------------------------------------------------\n%s   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
               componentName2,
               table
             );
@@ -5613,7 +5613,7 @@ var require_react_dom_client_development = __commonJS({
       }
       function throwInvalidHookError() {
         throw Error(
-          "Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:\n1. You might have mismatching versions of React and the renderer (such as React DOM)\n2. You might be breaking the Rules of Hooks\n3. You might have more than one copy of React in the same app\nSee https:
+          "Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:\n1. You might have mismatching versions of React and the renderer (such as React DOM)\n2. You might be breaking the Rules of Hooks\n3. You might have more than one copy of React in the same app\nSee https://react.dev/link/invalid-hook-call for tips about how to debug and fix this problem."
         );
       }
       function areHookInputsEqual(nextDeps, prevDeps) {
@@ -5888,7 +5888,7 @@ var require_react_dom_client_development = __commonJS({
         var queue = hook.queue;
         if (null === queue)
           throw Error(
-            "Should have a queue. You are likely calling Hooks conditionally, which is not allowed. (https:
+            "Should have a queue. You are likely calling Hooks conditionally, which is not allowed. (https://react.dev/link/invalid-hook-call)"
           );
         queue.lastRenderedReducer = reducer;
         var baseQueue = hook.baseQueue, pendingQueue = queue.pending;
@@ -5967,7 +5967,7 @@ var require_react_dom_client_development = __commonJS({
         var hook = updateWorkInProgressHook(), queue = hook.queue;
         if (null === queue)
           throw Error(
-            "Should have a queue. You are likely calling Hooks conditionally, which is not allowed. (https:
+            "Should have a queue. You are likely calling Hooks conditionally, which is not allowed. (https://react.dev/link/invalid-hook-call)"
           );
         queue.lastRenderedReducer = reducer;
         var dispatch = queue.dispatch, lastRenderPhaseUpdate = queue.pending, newState = hook.memoizedState;
@@ -6199,7 +6199,7 @@ var require_react_dom_client_development = __commonJS({
         var action = node.action, payload = node.payload, prevState = actionQueue.state;
         if (node.isTransition) {
           var prevTransition = ReactSharedInternals.T, currentTransition = {};
-          currentTransition._updatedFibers =  new Set();
+          currentTransition._updatedFibers = /* @__PURE__ */ new Set();
           ReactSharedInternals.T = currentTransition;
           try {
             var returnValue = action(prevState, payload), onStartTransitionFinish = ReactSharedInternals.S;
@@ -6601,7 +6601,7 @@ var require_react_dom_client_development = __commonJS({
         var previousPriority = ReactDOMSharedInternals.p;
         ReactDOMSharedInternals.p = 0 !== previousPriority && previousPriority < ContinuousEventPriority ? previousPriority : ContinuousEventPriority;
         var prevTransition = ReactSharedInternals.T, currentTransition = {};
-        currentTransition._updatedFibers =  new Set();
+        currentTransition._updatedFibers = /* @__PURE__ */ new Set();
         ReactSharedInternals.T = currentTransition;
         dispatchOptimisticSetState(fiber, false, queue, pendingState);
         try {
@@ -6964,7 +6964,7 @@ var require_react_dom_client_development = __commonJS({
         console.warn(
           "%s\n\n%s\n",
           componentName ? "An error occurred in the <" + componentName + "> component." : "An error occurred in one of your React components.",
-          "Consider adding an error boundary to your tree to customize error handling behavior.\nVisit https:
+          "Consider adding an error boundary to your tree to customize error handling behavior.\nVisit https://react.dev/link/error-boundaries to learn more about error boundaries."
         );
       }
       function defaultOnCaughtError(error) {
@@ -7080,7 +7080,7 @@ var require_react_dom_client_development = __commonJS({
             fiber,
             errorInfo
           );
-          "function" !== typeof getDerivedStateFromError && (null === legacyErrorBoundariesThatAlreadyFailed ? legacyErrorBoundariesThatAlreadyFailed =  new Set([this]) : legacyErrorBoundariesThatAlreadyFailed.add(this));
+          "function" !== typeof getDerivedStateFromError && (null === legacyErrorBoundariesThatAlreadyFailed ? legacyErrorBoundariesThatAlreadyFailed = /* @__PURE__ */ new Set([this]) : legacyErrorBoundariesThatAlreadyFailed.add(this));
           callComponentDidCatchInDEV(this, errorInfo);
           "function" === typeof getDerivedStateFromError || 0 === (fiber.lanes & 2) && console.error(
             "%s: Error boundaries should implement getDerivedStateFromError(). In that method, return a state update to display an error message or fallback UI.",
@@ -7105,13 +7105,13 @@ var require_react_dom_client_development = __commonJS({
             switch (sourceFiber.tag) {
               case 31:
               case 13:
-                return null === shellBoundary ? renderDidSuspendDelayIfPossible() : null === sourceFiber.alternate && workInProgressRootExitStatus === RootInProgress && (workInProgressRootExitStatus = RootSuspended), sourceFiber.flags &= -257, sourceFiber.flags |= 65536, sourceFiber.lanes = rootRenderLanes, value === noopSuspenseyCommitThenable ? sourceFiber.flags |= 16384 : (returnFiber = sourceFiber.updateQueue, null === returnFiber ? sourceFiber.updateQueue =  new Set([value]) : returnFiber.add(value), attachPingListener(root2, value, rootRenderLanes)), false;
+                return null === shellBoundary ? renderDidSuspendDelayIfPossible() : null === sourceFiber.alternate && workInProgressRootExitStatus === RootInProgress && (workInProgressRootExitStatus = RootSuspended), sourceFiber.flags &= -257, sourceFiber.flags |= 65536, sourceFiber.lanes = rootRenderLanes, value === noopSuspenseyCommitThenable ? sourceFiber.flags |= 16384 : (returnFiber = sourceFiber.updateQueue, null === returnFiber ? sourceFiber.updateQueue = /* @__PURE__ */ new Set([value]) : returnFiber.add(value), attachPingListener(root2, value, rootRenderLanes)), false;
               case 22:
                 return sourceFiber.flags |= 65536, value === noopSuspenseyCommitThenable ? sourceFiber.flags |= 16384 : (returnFiber = sourceFiber.updateQueue, null === returnFiber ? (returnFiber = {
                   transitions: null,
                   markerInstances: null,
-                  retryQueue:  new Set([value])
-                }, sourceFiber.updateQueue = returnFiber) : (sourceFiber = returnFiber.retryQueue, null === sourceFiber ? returnFiber.retryQueue =  new Set([value]) : sourceFiber.add(value)), attachPingListener(root2, value, rootRenderLanes)), false;
+                  retryQueue: /* @__PURE__ */ new Set([value])
+                }, sourceFiber.updateQueue = returnFiber) : (sourceFiber = returnFiber.retryQueue, null === sourceFiber ? returnFiber.retryQueue = /* @__PURE__ */ new Set([value]) : sourceFiber.add(value)), attachPingListener(root2, value, rootRenderLanes)), false;
             }
             throw Error(
               "Unexpected Suspense handler tag (" + sourceFiber.tag + "). This is a bug in React."
@@ -7466,7 +7466,7 @@ var require_react_dom_client_development = __commonJS({
           null
         );
         null === current2 && (validateFunctionComponentInDev(workInProgress2, workInProgress2.type), Component.contextTypes && (componentName2 = getComponentNameFromType(Component) || "Unknown", didWarnAboutContextTypes[componentName2] || (didWarnAboutContextTypes[componentName2] = true, console.error(
-          "%s uses the legacy contextTypes API which was removed in React 19. Use React.createContext() with React.useContext() instead. (https:
+          "%s uses the legacy contextTypes API which was removed in React 19. Use React.createContext() with React.useContext() instead. (https://react.dev/link/legacy-context)",
           componentName2
         ))));
         prepareToReadContext(workInProgress2);
@@ -7574,7 +7574,7 @@ var require_react_dom_client_development = __commonJS({
               _instance = getComponentNameFromType(Component) || "Component";
               var newApiName = "function" === typeof Component.getDerivedStateFromProps ? "getDerivedStateFromProps()" : "getSnapshotBeforeUpdate()";
               didWarnAboutLegacyLifecyclesAndDerivedState.has(_instance) || (didWarnAboutLegacyLifecyclesAndDerivedState.add(_instance), console.error(
-                "Unsafe legacy lifecycles will not be called for components using new component APIs.\n\n%s uses %s but also contains the following legacy lifecycles:%s%s%s\n\nThe above lifecycles should be removed. Learn more about this warning here:\nhttps:
+                "Unsafe legacy lifecycles will not be called for components using new component APIs.\n\n%s uses %s but also contains the following legacy lifecycles:%s%s%s\n\nThe above lifecycles should be removed. Learn more about this warning here:\nhttps://react.dev/link/unsafe-component-lifecycles",
                 _instance,
                 newApiName,
                 null !== state ? "\n  " + state : "",
@@ -7605,11 +7605,11 @@ var require_react_dom_client_development = __commonJS({
             state
           );
           Component.childContextTypes && !didWarnAboutChildContextTypes.has(Component) && (didWarnAboutChildContextTypes.add(Component), console.error(
-            "%s uses the legacy childContextTypes API which was removed in React 19. Use React.createContext() instead. (https:
+            "%s uses the legacy childContextTypes API which was removed in React 19. Use React.createContext() instead. (https://react.dev/link/legacy-context)",
             state
           ));
           Component.contextTypes && !didWarnAboutContextTypes$1.has(Component) && (didWarnAboutContextTypes$1.add(Component), console.error(
-            "%s uses the legacy contextTypes API which was removed in React 19. Use React.createContext() with static contextType instead. (https:
+            "%s uses the legacy contextTypes API which was removed in React 19. Use React.createContext() with static contextType instead. (https://react.dev/link/legacy-context)",
             state
           ));
           "function" === typeof _instance.componentShouldUpdate && console.error(
@@ -9414,7 +9414,7 @@ var require_react_dom_client_development = __commonJS({
                 var hookName = void 0;
                 hookName = 0 !== (updateQueue.tag & Layout) ? "useLayoutEffect" : 0 !== (updateQueue.tag & Insertion) ? "useInsertionEffect" : "useEffect";
                 var addendum = void 0;
-                addendum = null === lastEffect ? " You returned null. If your effect does not require clean up, return undefined (or nothing)." : "function" === typeof lastEffect.then ? "\n\nIt looks like you wrote " + hookName + "(async () => ...) or returned a Promise. Instead, write the async function inside your effect and call it immediately:\n\n" + hookName + "(() => {\n  async function fetchData() {\n    
+                addendum = null === lastEffect ? " You returned null. If your effect does not require clean up, return undefined (or nothing)." : "function" === typeof lastEffect.then ? "\n\nIt looks like you wrote " + hookName + "(async () => ...) or returned a Promise. Instead, write the async function inside your effect and call it immediately:\n\n" + hookName + "(() => {\n  async function fetchData() {\n    // You can await here\n    const response = await MyAPI.getData(someId);\n    // ...\n  }\n  fetchData();\n}, [someId]); // Or [] if effect doesn't need props or state\n\nLearn more about data fetching with Hooks: https://react.dev/link/hooks-data-fetching" : " You returned: " + lastEffect;
                 runWithFiberInDEV(
                   finishedWork,
                   function(n, a) {
@@ -11649,7 +11649,7 @@ var require_react_dom_client_development = __commonJS({
         if ((executionContext & RenderContext) !== NoContext && 0 !== workInProgressRootRenderLanes)
           return workInProgressRootRenderLanes & -workInProgressRootRenderLanes;
         var transition = ReactSharedInternals.T;
-        return null !== transition ? (transition._updatedFibers || (transition._updatedFibers =  new Set()), transition._updatedFibers.add(fiber), requestTransitionLane()) : resolveUpdatePriority();
+        return null !== transition ? (transition._updatedFibers || (transition._updatedFibers = /* @__PURE__ */ new Set()), transition._updatedFibers.add(fiber), requestTransitionLane()) : resolveUpdatePriority();
       }
       function requestDeferredLane() {
         if (0 === workInProgressDeferredLane)
@@ -11682,7 +11682,7 @@ var require_react_dom_client_development = __commonJS({
               case 15:
                 root2 = workInProgress && getComponentNameFromFiber(workInProgress) || "Unknown";
                 didWarnAboutUpdateInRenderForAnotherComponent.has(root2) || (didWarnAboutUpdateInRenderForAnotherComponent.add(root2), fiber = getComponentNameFromFiber(fiber) || "Unknown", console.error(
-                  "Cannot update a component (`%s`) while rendering a different component (`%s`). To locate the bad setState() call inside `%s`, follow the stack trace as described in https:
+                  "Cannot update a component (`%s`) while rendering a different component (`%s`). To locate the bad setState() call inside `%s`, follow the stack trace as described in https://react.dev/link/setstate-in-render",
                   fiber,
                   root2,
                   root2
@@ -13251,10 +13251,10 @@ var require_react_dom_client_development = __commonJS({
         var pingCache = root2.pingCache;
         if (null === pingCache) {
           pingCache = root2.pingCache = new PossiblyWeakMap();
-          var threadIDs =  new Set();
+          var threadIDs = /* @__PURE__ */ new Set();
           pingCache.set(wakeable, threadIDs);
         } else
-          threadIDs = pingCache.get(wakeable), void 0 === threadIDs && (threadIDs =  new Set(), pingCache.set(wakeable, threadIDs));
+          threadIDs = pingCache.get(wakeable), void 0 === threadIDs && (threadIDs = /* @__PURE__ */ new Set(), pingCache.set(wakeable, threadIDs));
         threadIDs.has(lanes) || (workInProgressRootDidAttachPingListener = true, threadIDs.add(lanes), pingCache = pingSuspendedRoot.bind(null, root2, wakeable, lanes), isDevToolsPresent && restorePendingUpdaters(root2, lanes), wakeable.then(pingCache, pingCache));
       }
       function pingSuspendedRoot(root2, wakeable, pingedLanes) {
@@ -13264,7 +13264,7 @@ var require_react_dom_client_development = __commonJS({
         root2.warmLanes &= ~pingedLanes;
         0 !== (pingedLanes & 127) ? 0 > blockingUpdateTime && (blockingClampTime = blockingUpdateTime = now(), blockingUpdateTask = createTask("Promise Resolved"), blockingUpdateType = PINGED_UPDATE) : 0 !== (pingedLanes & 4194048) && 0 > transitionUpdateTime && (transitionClampTime = transitionUpdateTime = now(), transitionUpdateTask = createTask("Promise Resolved"), transitionUpdateType = PINGED_UPDATE);
         isConcurrentActEnvironment() && null === ReactSharedInternals.actQueue && console.error(
-          "A suspended resource finished loading inside a test, but the event was not wrapped in act(...).\n\nWhen testing, code that resolves suspended data should be wrapped into act(...):\n\nact(() => {\n  \n});\n\n\nThis ensures that you're testing the behavior the user would see in the browser. Learn more at https:
+          "A suspended resource finished loading inside a test, but the event was not wrapped in act(...).\n\nWhen testing, code that resolves suspended data should be wrapped into act(...):\n\nact(() => {\n  /* finish loading suspended data */\n});\n/* assert on the output */\n\nThis ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act"
         );
         workInProgressRoot === root2 && (workInProgressRootRenderLanes & pingedLanes) === pingedLanes && (workInProgressRootExitStatus === RootSuspendedWithDelay || workInProgressRootExitStatus === RootSuspended && (workInProgressRootRenderLanes & 62914560) === workInProgressRootRenderLanes && now$1() - globalMostRecentFallbackTime < FALLBACK_THROTTLE_MS ? (executionContext & RenderContext) === NoContext && prepareFreshStack(root2, 0) : workInProgressRootPingedLanes |= pingedLanes, workInProgressSuspendedRetryLanes === workInProgressRootRenderLanes && (workInProgressSuspendedRetryLanes = 0));
         ensureRootIsScheduled(root2);
@@ -13356,7 +13356,7 @@ var require_react_dom_client_development = __commonJS({
             if (null !== didWarnStateUpdateForNotYetMountedComponent) {
               if (didWarnStateUpdateForNotYetMountedComponent.has(tag)) return;
               didWarnStateUpdateForNotYetMountedComponent.add(tag);
-            } else didWarnStateUpdateForNotYetMountedComponent =  new Set([tag]);
+            } else didWarnStateUpdateForNotYetMountedComponent = /* @__PURE__ */ new Set([tag]);
             runWithFiberInDEV(fiber, function() {
               console.error(
                 "Can't perform a React state update on a component that hasn't mounted yet. This indicates that you have a side-effect in your render function that asynchronously tries to update the component. Move this work to useEffect instead."
@@ -13377,7 +13377,7 @@ var require_react_dom_client_development = __commonJS({
       function warnIfUpdatesNotWrappedWithActDEV(fiber) {
         isConcurrentActEnvironment() && null === ReactSharedInternals.actQueue && runWithFiberInDEV(fiber, function() {
           console.error(
-            "An update to %s inside a test was not wrapped in act(...).\n\nWhen testing, code that causes React state updates should be wrapped into act(...):\n\nact(() => {\n  \n});\n\n\nThis ensures that you're testing the behavior the user would see in the browser. Learn more at https:
+            "An update to %s inside a test was not wrapped in act(...).\n\nWhen testing, code that causes React state updates should be wrapped into act(...):\n\nact(() => {\n  /* fire events that update state */\n});\n/* assert on the output */\n\nThis ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act",
             getComponentNameFromFiber(fiber)
           );
         });
@@ -13671,7 +13671,7 @@ var require_react_dom_client_development = __commonJS({
           domEventName
         );
         var listenerSet = targetElement[internalEventHandlersKey];
-        void 0 === listenerSet && (listenerSet = targetElement[internalEventHandlersKey] =  new Set());
+        void 0 === listenerSet && (listenerSet = targetElement[internalEventHandlersKey] = /* @__PURE__ */ new Set());
         var listenerSetKey = domEventName + "__bubble";
         listenerSet.has(listenerSetKey) || (addTrappedEventListener(targetElement, domEventName, 2, false), listenerSet.add(listenerSetKey));
       }
@@ -14309,7 +14309,7 @@ var require_react_dom_client_development = __commonJS({
             if (null != value) {
               if ("object" !== typeof value || !("__html" in value))
                 throw Error(
-                  "`props.dangerouslySetInnerHTML` must be in the form `{__html: ...}`. Please visit https:
+                  "`props.dangerouslySetInnerHTML` must be in the form `{__html: ...}`. Please visit https://react.dev/link/dangerously-set-inner-html for more information."
                 );
               key = value.__html;
               if (null != key) {
@@ -14502,7 +14502,7 @@ var require_react_dom_client_development = __commonJS({
             if (null != value) {
               if ("object" !== typeof value || !("__html" in value))
                 throw Error(
-                  "`props.dangerouslySetInnerHTML` must be in the form `{__html: ...}`. Please visit https:
+                  "`props.dangerouslySetInnerHTML` must be in the form `{__html: ...}`. Please visit https://react.dev/link/dangerously-set-inner-html for more information."
                 );
               key = value.__html;
               if (null != key) {
@@ -14860,10 +14860,10 @@ var require_react_dom_client_development = __commonJS({
             tag = "checkbox" === lastProps.type || "radio" === lastProps.type ? null != lastProps.checked : null != lastProps.value;
             nextProps = "checkbox" === nextProps.type || "radio" === nextProps.type ? null != nextProps.checked : null != nextProps.value;
             tag || !nextProps || didWarnUncontrolledToControlled || (console.error(
-              "A component is changing an uncontrolled input to be controlled. This is likely caused by the value changing from undefined to a defined value, which should not happen. Decide between using a controlled or uncontrolled input element for the lifetime of the component. More info: https:
+              "A component is changing an uncontrolled input to be controlled. This is likely caused by the value changing from undefined to a defined value, which should not happen. Decide between using a controlled or uncontrolled input element for the lifetime of the component. More info: https://react.dev/link/controlled-components"
             ), didWarnUncontrolledToControlled = true);
             !tag || nextProps || didWarnControlledToUncontrolled || (console.error(
-              "A component is changing a controlled input to be uncontrolled. This is likely caused by the value changing from a defined to undefined, which should not happen. Decide between using a controlled or uncontrolled input element for the lifetime of the component. More info: https:
+              "A component is changing a controlled input to be uncontrolled. This is likely caused by the value changing from a defined to undefined, which should not happen. Decide between using a controlled or uncontrolled input element for the lifetime of the component. More info: https://react.dev/link/controlled-components"
             ), didWarnControlledToUncontrolled = true);
             updateInput(
               domElement,
@@ -15212,7 +15212,7 @@ var require_react_dom_client_development = __commonJS({
         warnForPropDifference(propKey, domElement, value, serverDifferences);
       }
       function diffHydratedProperties(domElement, tag, props, hostContext) {
-        for (var serverDifferences = {}, extraAttributes =  new Set(), attributes = domElement.attributes, i = 0; i < attributes.length; i++)
+        for (var serverDifferences = {}, extraAttributes = /* @__PURE__ */ new Set(), attributes = domElement.attributes, i = 0; i < attributes.length; i++)
           switch (attributes[i].name.toLowerCase()) {
             case "value":
               break;
@@ -16426,11 +16426,11 @@ var require_react_dom_client_development = __commonJS({
       }
       function getHydratableHoistableCache(type, keyAttribute, ownerDocument) {
         if (null === tagCaches) {
-          var cache =  new Map();
-          var caches = tagCaches =  new Map();
+          var cache = /* @__PURE__ */ new Map();
+          var caches = tagCaches = /* @__PURE__ */ new Map();
           caches.set(ownerDocument, cache);
         } else
-          caches = tagCaches, cache = caches.get(ownerDocument), cache || (cache =  new Map(), caches.set(ownerDocument, cache));
+          caches = tagCaches, cache = caches.get(ownerDocument), cache || (cache = /* @__PURE__ */ new Map(), caches.set(ownerDocument, cache));
         if (cache.has(type)) return cache;
         cache.set(type, null);
         ownerDocument = ownerDocument.getElementsByTagName(type);
@@ -16558,7 +16558,7 @@ var require_react_dom_client_development = __commonJS({
             setInitialProperties(instance, "link", props);
             resource.instance = instance;
           }
-          null === state.stylesheets && (state.stylesheets =  new Map());
+          null === state.stylesheets && (state.stylesheets = /* @__PURE__ */ new Map());
           state.stylesheets.set(resource, hoistableRoot);
           (hoistableRoot = resource.state.preload) && (resource.state.loading & Settled) === NotLoaded && (state.count++, resource = onUnsuspend.bind(state), hoistableRoot.addEventListener("load", resource), hoistableRoot.addEventListener("error", resource));
         }
@@ -16608,14 +16608,14 @@ var require_react_dom_client_development = __commonJS({
       }
       function insertSuspendedStylesheets(state, resources) {
         state.stylesheets = null;
-        null !== state.unsuspend && (state.count++, precedencesByRoot =  new Map(), resources.forEach(insertStylesheetIntoRoot, state), precedencesByRoot = null, onUnsuspend.call(state));
+        null !== state.unsuspend && (state.count++, precedencesByRoot = /* @__PURE__ */ new Map(), resources.forEach(insertStylesheetIntoRoot, state), precedencesByRoot = null, onUnsuspend.call(state));
       }
       function insertStylesheetIntoRoot(root2, resource) {
         if (!(resource.state.loading & Inserted)) {
           var precedences = precedencesByRoot.get(root2);
           if (precedences) var last = precedences.get(LAST_PRECEDENCE);
           else {
-            precedences =  new Map();
+            precedences = /* @__PURE__ */ new Map();
             precedencesByRoot.set(root2, precedences);
             for (var nodes = root2.querySelectorAll(
               "link[data-precedence],style[data-precedence]"
@@ -16657,11 +16657,11 @@ var require_react_dom_client_development = __commonJS({
         this.pooledCache = null;
         this.pooledCacheLanes = 0;
         this.formState = formState;
-        this.incompleteTransitions =  new Map();
+        this.incompleteTransitions = /* @__PURE__ */ new Map();
         this.passiveEffectDuration = this.effectDuration = -0;
-        this.memoizedUpdaters =  new Set();
+        this.memoizedUpdaters = /* @__PURE__ */ new Set();
         containerInfo = this.pendingUpdatersLaneMap = [];
-        for (tag = 0; 31 > tag; tag++) containerInfo.push( new Set());
+        for (tag = 0; 31 > tag; tag++) containerInfo.push(/* @__PURE__ */ new Set());
         this._debugRootType = hydrate ? "hydrateRoot()" : "createRoot()";
       }
       function createFiberRoot(containerInfo, tag, hydrate, initialChildren, hydrationCallbacks, isStrictMode, identifierPrefix, formState, onUncaughtError, onCaughtError, onRecoverableError, onDefaultTransitionIndicator) {
@@ -17272,7 +17272,7 @@ var require_react_dom_client_development = __commonJS({
       disabledLog.__reactDisabledLog = true;
       var prefix, suffix, reentry = false;
       var componentFrameCache = new ("function" === typeof WeakMap ? WeakMap : Map)();
-      var current = null, isRendering = false, hasOwnProperty = Object.prototype.hasOwnProperty, scheduleCallback$3 = Scheduler.unstable_scheduleCallback, cancelCallback$1 = Scheduler.unstable_cancelCallback, shouldYield = Scheduler.unstable_shouldYield, requestPaint = Scheduler.unstable_requestPaint, now$1 = Scheduler.unstable_now, getCurrentPriorityLevel = Scheduler.unstable_getCurrentPriorityLevel, ImmediatePriority = Scheduler.unstable_ImmediatePriority, UserBlockingPriority = Scheduler.unstable_UserBlockingPriority, NormalPriority$1 = Scheduler.unstable_NormalPriority, LowPriority = Scheduler.unstable_LowPriority, IdlePriority = Scheduler.unstable_IdlePriority, log$1 = Scheduler.log, unstable_setDisableYieldValue = Scheduler.unstable_setDisableYieldValue, rendererID = null, injectedHook = null, hasLoggedError = false, isDevToolsPresent = "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__, clz32 = Math.clz32 ? Math.clz32 : clz32Fallback, log = Math.log, LN2 = Math.LN2, nextTransitionUpdateLane = 256, nextTransitionDeferredLane = 262144, nextRetryLane = 4194304, DiscreteEventPriority = 2, ContinuousEventPriority = 8, DefaultEventPriority = 32, IdleEventPriority = 268435456, randomKey = Math.random().toString(36).slice(2), internalInstanceKey = "__reactFiber$" + randomKey, internalPropsKey = "__reactProps$" + randomKey, internalContainerInstanceKey = "__reactContainer$" + randomKey, internalEventHandlersKey = "__reactEvents$" + randomKey, internalEventHandlerListenersKey = "__reactListeners$" + randomKey, internalEventHandlesSetKey = "__reactHandles$" + randomKey, internalRootNodeResourcesKey = "__reactResources$" + randomKey, internalHoistableMarker = "__reactMarker$" + randomKey, allNativeEvents =  new Set(), registrationNameDependencies = {}, possibleRegistrationNames = {}, hasReadOnlyValue = {
+      var current = null, isRendering = false, hasOwnProperty = Object.prototype.hasOwnProperty, scheduleCallback$3 = Scheduler.unstable_scheduleCallback, cancelCallback$1 = Scheduler.unstable_cancelCallback, shouldYield = Scheduler.unstable_shouldYield, requestPaint = Scheduler.unstable_requestPaint, now$1 = Scheduler.unstable_now, getCurrentPriorityLevel = Scheduler.unstable_getCurrentPriorityLevel, ImmediatePriority = Scheduler.unstable_ImmediatePriority, UserBlockingPriority = Scheduler.unstable_UserBlockingPriority, NormalPriority$1 = Scheduler.unstable_NormalPriority, LowPriority = Scheduler.unstable_LowPriority, IdlePriority = Scheduler.unstable_IdlePriority, log$1 = Scheduler.log, unstable_setDisableYieldValue = Scheduler.unstable_setDisableYieldValue, rendererID = null, injectedHook = null, hasLoggedError = false, isDevToolsPresent = "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__, clz32 = Math.clz32 ? Math.clz32 : clz32Fallback, log = Math.log, LN2 = Math.LN2, nextTransitionUpdateLane = 256, nextTransitionDeferredLane = 262144, nextRetryLane = 4194304, DiscreteEventPriority = 2, ContinuousEventPriority = 8, DefaultEventPriority = 32, IdleEventPriority = 268435456, randomKey = Math.random().toString(36).slice(2), internalInstanceKey = "__reactFiber$" + randomKey, internalPropsKey = "__reactProps$" + randomKey, internalContainerInstanceKey = "__reactContainer$" + randomKey, internalEventHandlersKey = "__reactEvents$" + randomKey, internalEventHandlerListenersKey = "__reactListeners$" + randomKey, internalEventHandlesSetKey = "__reactHandles$" + randomKey, internalRootNodeResourcesKey = "__reactResources$" + randomKey, internalHoistableMarker = "__reactMarker$" + randomKey, allNativeEvents = /* @__PURE__ */ new Set(), registrationNameDependencies = {}, possibleRegistrationNames = {}, hasReadOnlyValue = {
         button: true,
         checkbox: true,
         image: true,
@@ -17433,7 +17433,7 @@ var require_react_dom_client_development = __commonJS({
         "animationIterationCount aspectRatio borderImageOutset borderImageSlice borderImageWidth boxFlex boxFlexGroup boxOrdinalGroup columnCount columns flex flexGrow flexPositive flexShrink flexNegative flexOrder gridArea gridRow gridRowEnd gridRowSpan gridRowStart gridColumn gridColumnEnd gridColumnSpan gridColumnStart fontWeight lineClamp lineHeight opacity order orphans scale tabSize widows zIndex zoom fillOpacity floodOpacity stopOpacity strokeDasharray strokeDashoffset strokeMiterlimit strokeOpacity strokeWidth MozAnimationIterationCount MozBoxFlex MozBoxFlexGroup MozLineClamp msAnimationIterationCount msFlex msZoom msFlexGrow msFlexNegative msFlexOrder msFlexPositive msFlexShrink msGridColumn msGridColumnSpan msGridRow msGridRowSpan WebkitAnimationIterationCount WebkitBoxFlex WebKitBoxFlexGroup WebkitBoxOrdinalGroup WebkitColumnCount WebkitColumns WebkitFlex WebkitFlexGrow WebkitFlexPositive WebkitFlexShrink WebkitLineClamp".split(
           " "
         )
-      ), MATH_NAMESPACE = "http:
+      ), MATH_NAMESPACE = "http://www.w3.org/1998/Math/MathML", SVG_NAMESPACE = "http://www.w3.org/2000/svg", aliases = /* @__PURE__ */ new Map([
         ["acceptCharset", "accept-charset"],
         ["htmlFor", "for"],
         ["httpEquiv", "http-equiv"],
@@ -18272,7 +18272,7 @@ var require_react_dom_client_development = __commonJS({
         transitionend: makePrefixMap("Transition", "TransitionEnd")
       }, prefixedEventNames = {}, style = {};
       canUseDOM && (style = document.createElement("div").style, "AnimationEvent" in window || (delete vendorPrefixes.animationend.animation, delete vendorPrefixes.animationiteration.animation, delete vendorPrefixes.animationstart.animation), "TransitionEvent" in window || delete vendorPrefixes.transitionend.transition);
-      var ANIMATION_END = getVendorPrefixedEventName("animationend"), ANIMATION_ITERATION = getVendorPrefixedEventName("animationiteration"), ANIMATION_START = getVendorPrefixedEventName("animationstart"), TRANSITION_RUN = getVendorPrefixedEventName("transitionrun"), TRANSITION_START = getVendorPrefixedEventName("transitionstart"), TRANSITION_CANCEL = getVendorPrefixedEventName("transitioncancel"), TRANSITION_END = getVendorPrefixedEventName("transitionend"), topLevelEventsToReactNames =  new Map(), simpleEventPluginEvents = "abort auxClick beforeToggle cancel canPlay canPlayThrough click close contextMenu copy cut drag dragEnd dragEnter dragExit dragLeave dragOver dragStart drop durationChange emptied encrypted ended error gotPointerCapture input invalid keyDown keyPress keyUp load loadedData loadedMetadata loadStart lostPointerCapture mouseDown mouseMove mouseOut mouseOver mouseUp paste pause play playing pointerCancel pointerDown pointerMove pointerOut pointerOver pointerUp progress rateChange reset resize seeked seeking stalled submit suspend timeUpdate touchCancel touchEnd touchStart volumeChange scroll toggle touchMove waiting wheel".split(
+      var ANIMATION_END = getVendorPrefixedEventName("animationend"), ANIMATION_ITERATION = getVendorPrefixedEventName("animationiteration"), ANIMATION_START = getVendorPrefixedEventName("animationstart"), TRANSITION_RUN = getVendorPrefixedEventName("transitionrun"), TRANSITION_START = getVendorPrefixedEventName("transitionstart"), TRANSITION_CANCEL = getVendorPrefixedEventName("transitioncancel"), TRANSITION_END = getVendorPrefixedEventName("transitionend"), topLevelEventsToReactNames = /* @__PURE__ */ new Map(), simpleEventPluginEvents = "abort auxClick beforeToggle cancel canPlay canPlayThrough click close contextMenu copy cut drag dragEnd dragEnter dragExit dragLeave dragOver dragStart drop durationChange emptied encrypted ended error gotPointerCapture input invalid keyDown keyPress keyUp load loadedData loadedMetadata loadStart lostPointerCapture mouseDown mouseMove mouseOut mouseOver mouseUp paste pause play playing pointerCancel pointerDown pointerMove pointerOut pointerOver pointerUp progress rateChange reset resize seeked seeking stalled submit suspend timeUpdate touchCancel touchEnd touchStart volumeChange scroll toggle touchMove waiting wheel".split(
         " "
       );
       simpleEventPluginEvents.push("scrollEnd");
@@ -18317,12 +18317,12 @@ var require_react_dom_client_development = __commonJS({
       var hasBadMapPolyfill = false;
       try {
         var nonExtensibleObject = Object.preventExtensions({});
-         new Map([[nonExtensibleObject, null]]);
-         new Set([nonExtensibleObject]);
+        /* @__PURE__ */ new Map([[nonExtensibleObject, null]]);
+        /* @__PURE__ */ new Set([nonExtensibleObject]);
       } catch (e$3) {
         hasBadMapPolyfill = true;
       }
-      var CapturedStacks =  new WeakMap(), forkStack = [], forkStackIndex = 0, treeForkProvider = null, treeForkCount = 0, idStack = [], idStackIndex = 0, treeContextProvider = null, treeContextId = 1, treeContextOverflow = "", hydrationParentFiber = null, nextHydratableInstance = null, isHydrating = false, didSuspendOrErrorDEV = false, hydrationDiffRootDEV = null, hydrationErrors = null, rootOrSingletonContext = false, HydrationMismatchException = Error(
+      var CapturedStacks = /* @__PURE__ */ new WeakMap(), forkStack = [], forkStackIndex = 0, treeForkProvider = null, treeForkCount = 0, idStack = [], idStackIndex = 0, treeContextProvider = null, treeContextId = 1, treeContextOverflow = "", hydrationParentFiber = null, nextHydratableInstance = null, isHydrating = false, didSuspendOrErrorDEV = false, hydrationDiffRootDEV = null, hydrationErrors = null, rootOrSingletonContext = false, HydrationMismatchException = Error(
         "Hydration Mismatch Exception: This is not a real error, and should not leak into userspace. If you're seeing this, it's likely a bug in React."
       ), valueCursor = createCursor(null);
       var rendererCursorDEV = createCursor(null);
@@ -18378,33 +18378,33 @@ var require_react_dom_client_development = __commonJS({
         },
         discardPendingWarnings: function() {
         }
-      }, pendingComponentWillMountWarnings = [], pendingUNSAFE_ComponentWillMountWarnings = [], pendingComponentWillReceivePropsWarnings = [], pendingUNSAFE_ComponentWillReceivePropsWarnings = [], pendingComponentWillUpdateWarnings = [], pendingUNSAFE_ComponentWillUpdateWarnings = [], didWarnAboutUnsafeLifecycles =  new Set();
+      }, pendingComponentWillMountWarnings = [], pendingUNSAFE_ComponentWillMountWarnings = [], pendingComponentWillReceivePropsWarnings = [], pendingUNSAFE_ComponentWillReceivePropsWarnings = [], pendingComponentWillUpdateWarnings = [], pendingUNSAFE_ComponentWillUpdateWarnings = [], didWarnAboutUnsafeLifecycles = /* @__PURE__ */ new Set();
       ReactStrictModeWarnings.recordUnsafeLifecycleWarnings = function(fiber, instance) {
         didWarnAboutUnsafeLifecycles.has(fiber.type) || ("function" === typeof instance.componentWillMount && true !== instance.componentWillMount.__suppressDeprecationWarning && pendingComponentWillMountWarnings.push(fiber), fiber.mode & StrictLegacyMode && "function" === typeof instance.UNSAFE_componentWillMount && pendingUNSAFE_ComponentWillMountWarnings.push(fiber), "function" === typeof instance.componentWillReceiveProps && true !== instance.componentWillReceiveProps.__suppressDeprecationWarning && pendingComponentWillReceivePropsWarnings.push(fiber), fiber.mode & StrictLegacyMode && "function" === typeof instance.UNSAFE_componentWillReceiveProps && pendingUNSAFE_ComponentWillReceivePropsWarnings.push(fiber), "function" === typeof instance.componentWillUpdate && true !== instance.componentWillUpdate.__suppressDeprecationWarning && pendingComponentWillUpdateWarnings.push(fiber), fiber.mode & StrictLegacyMode && "function" === typeof instance.UNSAFE_componentWillUpdate && pendingUNSAFE_ComponentWillUpdateWarnings.push(fiber));
       };
       ReactStrictModeWarnings.flushPendingUnsafeLifecycleWarnings = function() {
-        var componentWillMountUniqueNames =  new Set();
+        var componentWillMountUniqueNames = /* @__PURE__ */ new Set();
         0 < pendingComponentWillMountWarnings.length && (pendingComponentWillMountWarnings.forEach(function(fiber) {
           componentWillMountUniqueNames.add(
             getComponentNameFromFiber(fiber) || "Component"
           );
           didWarnAboutUnsafeLifecycles.add(fiber.type);
         }), pendingComponentWillMountWarnings = []);
-        var UNSAFE_componentWillMountUniqueNames =  new Set();
+        var UNSAFE_componentWillMountUniqueNames = /* @__PURE__ */ new Set();
         0 < pendingUNSAFE_ComponentWillMountWarnings.length && (pendingUNSAFE_ComponentWillMountWarnings.forEach(function(fiber) {
           UNSAFE_componentWillMountUniqueNames.add(
             getComponentNameFromFiber(fiber) || "Component"
           );
           didWarnAboutUnsafeLifecycles.add(fiber.type);
         }), pendingUNSAFE_ComponentWillMountWarnings = []);
-        var componentWillReceivePropsUniqueNames =  new Set();
+        var componentWillReceivePropsUniqueNames = /* @__PURE__ */ new Set();
         0 < pendingComponentWillReceivePropsWarnings.length && (pendingComponentWillReceivePropsWarnings.forEach(function(fiber) {
           componentWillReceivePropsUniqueNames.add(
             getComponentNameFromFiber(fiber) || "Component"
           );
           didWarnAboutUnsafeLifecycles.add(fiber.type);
         }), pendingComponentWillReceivePropsWarnings = []);
-        var UNSAFE_componentWillReceivePropsUniqueNames =  new Set();
+        var UNSAFE_componentWillReceivePropsUniqueNames = /* @__PURE__ */ new Set();
         0 < pendingUNSAFE_ComponentWillReceivePropsWarnings.length && (pendingUNSAFE_ComponentWillReceivePropsWarnings.forEach(
           function(fiber) {
             UNSAFE_componentWillReceivePropsUniqueNames.add(
@@ -18413,14 +18413,14 @@ var require_react_dom_client_development = __commonJS({
             didWarnAboutUnsafeLifecycles.add(fiber.type);
           }
         ), pendingUNSAFE_ComponentWillReceivePropsWarnings = []);
-        var componentWillUpdateUniqueNames =  new Set();
+        var componentWillUpdateUniqueNames = /* @__PURE__ */ new Set();
         0 < pendingComponentWillUpdateWarnings.length && (pendingComponentWillUpdateWarnings.forEach(function(fiber) {
           componentWillUpdateUniqueNames.add(
             getComponentNameFromFiber(fiber) || "Component"
           );
           didWarnAboutUnsafeLifecycles.add(fiber.type);
         }), pendingComponentWillUpdateWarnings = []);
-        var UNSAFE_componentWillUpdateUniqueNames =  new Set();
+        var UNSAFE_componentWillUpdateUniqueNames = /* @__PURE__ */ new Set();
         0 < pendingUNSAFE_ComponentWillUpdateWarnings.length && (pendingUNSAFE_ComponentWillUpdateWarnings.forEach(function(fiber) {
           UNSAFE_componentWillUpdateUniqueNames.add(
             getComponentNameFromFiber(fiber) || "Component"
@@ -18432,38 +18432,38 @@ var require_react_dom_client_development = __commonJS({
             UNSAFE_componentWillMountUniqueNames
           );
           console.error(
-            "Using UNSAFE_componentWillMount in strict mode is not recommended and may indicate bugs in your code. See https:
+            "Using UNSAFE_componentWillMount in strict mode is not recommended and may indicate bugs in your code. See https://react.dev/link/unsafe-component-lifecycles for details.\n\n* Move code with side effects to componentDidMount, and set initial state in the constructor.\n\nPlease update the following components: %s",
             sortedNames
           );
         }
         0 < UNSAFE_componentWillReceivePropsUniqueNames.size && (sortedNames = setToSortedString(
           UNSAFE_componentWillReceivePropsUniqueNames
         ), console.error(
-          "Using UNSAFE_componentWillReceiveProps in strict mode is not recommended and may indicate bugs in your code. See https:
+          "Using UNSAFE_componentWillReceiveProps in strict mode is not recommended and may indicate bugs in your code. See https://react.dev/link/unsafe-component-lifecycles for details.\n\n* Move data fetching code or side effects to componentDidUpdate.\n* If you're updating state whenever props change, refactor your code to use memoization techniques or move it to static getDerivedStateFromProps. Learn more at: https://react.dev/link/derived-state\n\nPlease update the following components: %s",
           sortedNames
         ));
         0 < UNSAFE_componentWillUpdateUniqueNames.size && (sortedNames = setToSortedString(
           UNSAFE_componentWillUpdateUniqueNames
         ), console.error(
-          "Using UNSAFE_componentWillUpdate in strict mode is not recommended and may indicate bugs in your code. See https:
+          "Using UNSAFE_componentWillUpdate in strict mode is not recommended and may indicate bugs in your code. See https://react.dev/link/unsafe-component-lifecycles for details.\n\n* Move data fetching code or side effects to componentDidUpdate.\n\nPlease update the following components: %s",
           sortedNames
         ));
         0 < componentWillMountUniqueNames.size && (sortedNames = setToSortedString(componentWillMountUniqueNames), console.warn(
-          "componentWillMount has been renamed, and is not recommended for use. See https:
+          "componentWillMount has been renamed, and is not recommended for use. See https://react.dev/link/unsafe-component-lifecycles for details.\n\n* Move code with side effects to componentDidMount, and set initial state in the constructor.\n* Rename componentWillMount to UNSAFE_componentWillMount to suppress this warning in non-strict mode. In React 18.x, only the UNSAFE_ name will work. To rename all deprecated lifecycles to their new names, you can run `npx react-codemod rename-unsafe-lifecycles` in your project source folder.\n\nPlease update the following components: %s",
           sortedNames
         ));
         0 < componentWillReceivePropsUniqueNames.size && (sortedNames = setToSortedString(
           componentWillReceivePropsUniqueNames
         ), console.warn(
-          "componentWillReceiveProps has been renamed, and is not recommended for use. See https:
+          "componentWillReceiveProps has been renamed, and is not recommended for use. See https://react.dev/link/unsafe-component-lifecycles for details.\n\n* Move data fetching code or side effects to componentDidUpdate.\n* If you're updating state whenever props change, refactor your code to use memoization techniques or move it to static getDerivedStateFromProps. Learn more at: https://react.dev/link/derived-state\n* Rename componentWillReceiveProps to UNSAFE_componentWillReceiveProps to suppress this warning in non-strict mode. In React 18.x, only the UNSAFE_ name will work. To rename all deprecated lifecycles to their new names, you can run `npx react-codemod rename-unsafe-lifecycles` in your project source folder.\n\nPlease update the following components: %s",
           sortedNames
         ));
         0 < componentWillUpdateUniqueNames.size && (sortedNames = setToSortedString(componentWillUpdateUniqueNames), console.warn(
-          "componentWillUpdate has been renamed, and is not recommended for use. See https:
+          "componentWillUpdate has been renamed, and is not recommended for use. See https://react.dev/link/unsafe-component-lifecycles for details.\n\n* Move data fetching code or side effects to componentDidUpdate.\n* Rename componentWillUpdate to UNSAFE_componentWillUpdate to suppress this warning in non-strict mode. In React 18.x, only the UNSAFE_ name will work. To rename all deprecated lifecycles to their new names, you can run `npx react-codemod rename-unsafe-lifecycles` in your project source folder.\n\nPlease update the following components: %s",
           sortedNames
         ));
       };
-      var pendingLegacyContextWarning =  new Map(), didWarnAboutLegacyContext =  new Set();
+      var pendingLegacyContextWarning = /* @__PURE__ */ new Map(), didWarnAboutLegacyContext = /* @__PURE__ */ new Set();
       ReactStrictModeWarnings.recordLegacyContextWarning = function(fiber, instance) {
         var strictRoot = null;
         for (var node = fiber; null !== node; )
@@ -18475,7 +18475,7 @@ var require_react_dom_client_development = __commonJS({
       ReactStrictModeWarnings.flushLegacyContextWarning = function() {
         pendingLegacyContextWarning.forEach(function(fiberArray) {
           if (0 !== fiberArray.length) {
-            var firstFiber = fiberArray[0], uniqueNames =  new Set();
+            var firstFiber = fiberArray[0], uniqueNames = /* @__PURE__ */ new Set();
             fiberArray.forEach(function(fiber) {
               uniqueNames.add(getComponentNameFromFiber(fiber) || "Component");
               didWarnAboutLegacyContext.add(fiber.type);
@@ -18483,7 +18483,7 @@ var require_react_dom_client_development = __commonJS({
             var sortedNames = setToSortedString(uniqueNames);
             runWithFiberInDEV(firstFiber, function() {
               console.error(
-                "Legacy context API has been detected within a strict-mode tree.\n\nThe old API will be supported in all 16.x releases, but applications using it should migrate to the new version.\n\nPlease update the following components: %s\n\nLearn more about this warning here: https:
+                "Legacy context API has been detected within a strict-mode tree.\n\nThe old API will be supported in all 16.x releases, but applications using it should migrate to the new version.\n\nPlease update the following components: %s\n\nLearn more about this warning here: https://react.dev/link/legacy-context",
                 sortedNames
               );
             });
@@ -18497,7 +18497,7 @@ var require_react_dom_client_development = __commonJS({
         pendingUNSAFE_ComponentWillReceivePropsWarnings = [];
         pendingComponentWillUpdateWarnings = [];
         pendingUNSAFE_ComponentWillUpdateWarnings = [];
-        pendingLegacyContextWarning =  new Map();
+        pendingLegacyContextWarning = /* @__PURE__ */ new Map();
       };
       var callComponent = {
         react_stack_bottom_frame: function(Component, props, secondArg) {
@@ -18614,7 +18614,7 @@ var require_react_dom_client_development = __commonJS({
             null != child && returnFiber !== child && (componentName2 = null, "number" === typeof child.tag ? componentName2 = getComponentNameFromFiber(child) : "string" === typeof child.name && (componentName2 = child.name), componentName2 && (childOwnerAppendix = " It was passed a child from " + componentName2 + "."));
             runWithFiberInDEV(workInProgress2, function() {
               console.error(
-                'Each child in a list should have a unique "key" prop.%s%s See https:
+                'Each child in a list should have a unique "key" prop.%s%s See https://react.dev/link/warning-keys for more information.',
                 currentComponentErrorInfo,
                 childOwnerAppendix
               );
@@ -18626,10 +18626,10 @@ var require_react_dom_client_development = __commonJS({
       var didWarnUpdateInsideUpdate = false;
       var currentlyProcessingQueue = null;
       var didReadFromEntangledAsyncAction = false, currentTreeHiddenStackCursor = createCursor(null), prevEntangledRenderLanesCursor = createCursor(0), suspenseHandlerStackCursor = createCursor(null), shellBoundary = null, SubtreeSuspenseContextMask = 1, ForceSuspenseFallback = 2, suspenseStackCursor = createCursor(0), NoFlags = 0, HasEffect = 1, Insertion = 2, Layout = 4, Passive = 8, didWarnUncachedGetSnapshot;
-      var didWarnAboutMismatchedHooksForComponent =  new Set();
-      var didWarnAboutUseWrappedInTryCatch =  new Set();
-      var didWarnAboutAsyncClientComponent =  new Set();
-      var didWarnAboutUseFormState =  new Set();
+      var didWarnAboutMismatchedHooksForComponent = /* @__PURE__ */ new Set();
+      var didWarnAboutUseWrappedInTryCatch = /* @__PURE__ */ new Set();
+      var didWarnAboutAsyncClientComponent = /* @__PURE__ */ new Set();
+      var didWarnAboutUseFormState = /* @__PURE__ */ new Set();
       var renderLanes = 0, currentlyRenderingFiber = null, currentHook = null, workInProgressHook = null, didScheduleRenderPhaseUpdate = false, didScheduleRenderPhaseUpdateDuringThisPass = false, shouldDoubleInvokeUserFnsInHooksDEV = false, localIdCounter = 0, thenableIndexCounter = 0, thenableState = null, globalClientIdCounter = 0, RE_RENDER_LIMIT = 25, currentHookNameInDev = null, hookTypesDev = null, hookTypesUpdateIndexDev = -1, ignorePreviousDependencies = false, ContextOnlyDispatcher = {
         readContext,
         use,
@@ -19649,16 +19649,16 @@ var require_react_dom_client_development = __commonJS({
         }
       };
       var fakeInternalInstance = {};
-      var didWarnAboutStateAssignmentForComponent =  new Set();
-      var didWarnAboutUninitializedState =  new Set();
-      var didWarnAboutGetSnapshotBeforeUpdateWithoutDidUpdate =  new Set();
-      var didWarnAboutLegacyLifecyclesAndDerivedState =  new Set();
-      var didWarnAboutDirectlyAssigningPropsToState =  new Set();
-      var didWarnAboutUndefinedDerivedState =  new Set();
-      var didWarnAboutContextTypes$1 =  new Set();
-      var didWarnAboutChildContextTypes =  new Set();
-      var didWarnAboutInvalidateContextType =  new Set();
-      var didWarnOnInvalidCallback =  new Set();
+      var didWarnAboutStateAssignmentForComponent = /* @__PURE__ */ new Set();
+      var didWarnAboutUninitializedState = /* @__PURE__ */ new Set();
+      var didWarnAboutGetSnapshotBeforeUpdateWithoutDidUpdate = /* @__PURE__ */ new Set();
+      var didWarnAboutLegacyLifecyclesAndDerivedState = /* @__PURE__ */ new Set();
+      var didWarnAboutDirectlyAssigningPropsToState = /* @__PURE__ */ new Set();
+      var didWarnAboutUndefinedDerivedState = /* @__PURE__ */ new Set();
+      var didWarnAboutContextTypes$1 = /* @__PURE__ */ new Set();
+      var didWarnAboutChildContextTypes = /* @__PURE__ */ new Set();
+      var didWarnAboutInvalidateContextType = /* @__PURE__ */ new Set();
+      var didWarnOnInvalidCallback = /* @__PURE__ */ new Set();
       Object.freeze(fakeInternalInstance);
       var classComponentUpdater = {
         enqueueSetState: function(inst, payload, callback) {
@@ -19702,7 +19702,7 @@ var require_react_dom_client_development = __commonJS({
         retryLane: 0,
         hydrationErrors: null
       }, hasWarnedAboutUsingNoValuePropOnContextProvider = false, didWarnAboutUndefinedSnapshotBeforeUpdate = null;
-      didWarnAboutUndefinedSnapshotBeforeUpdate =  new Set();
+      didWarnAboutUndefinedSnapshotBeforeUpdate = /* @__PURE__ */ new Set();
       var offscreenSubtreeIsHidden = false, offscreenSubtreeWasHidden = false, needsFormReset = false, PossiblyWeakSet = "function" === typeof WeakSet ? WeakSet : Set, nextEffect = null, inProgressLanes = null, inProgressRoot = null, hostParent = null, hostParentIsContainer = false, currentHoistableRoot = null, inHydratedSubtree = false, suspenseyCommitFlag = 8192, DefaultAsyncDispatcher = {
         getCacheForType: function(resourceType) {
           var cache = readContext(CacheContext), cacheForType = cache.data.get(resourceType);
@@ -19725,7 +19725,7 @@ var require_react_dom_client_development = __commonJS({
         symbolFor("selector.text");
       }
       var commitHooks = [], PossiblyWeakMap = "function" === typeof WeakMap ? WeakMap : Map, NoContext = 0, RenderContext = 2, CommitContext = 4, RootInProgress = 0, RootFatalErrored = 1, RootErrored = 2, RootSuspended = 3, RootSuspendedWithDelay = 4, RootSuspendedAtTheShell = 6, RootCompleted = 5, executionContext = NoContext, workInProgressRoot = null, workInProgress = null, workInProgressRootRenderLanes = 0, NotSuspended = 0, SuspendedOnError = 1, SuspendedOnData = 2, SuspendedOnImmediate = 3, SuspendedOnInstance = 4, SuspendedOnInstanceAndReadyToContinue = 5, SuspendedOnDeprecatedThrowPromise = 6, SuspendedAndReadyToContinue = 7, SuspendedOnHydration = 8, SuspendedOnAction = 9, workInProgressSuspendedReason = NotSuspended, workInProgressThrownValue = null, workInProgressRootDidSkipSuspendedSiblings = false, workInProgressRootIsPrerendering = false, workInProgressRootDidAttachPingListener = false, entangledRenderLanes = 0, workInProgressRootExitStatus = RootInProgress, workInProgressRootSkippedLanes = 0, workInProgressRootInterleavedUpdatedLanes = 0, workInProgressRootPingedLanes = 0, workInProgressDeferredLane = 0, workInProgressSuspendedRetryLanes = 0, workInProgressRootConcurrentErrors = null, workInProgressRootRecoverableErrors = null, workInProgressRootDidIncludeRecursiveRenderUpdate = false, globalMostRecentFallbackTime = 0, globalMostRecentTransitionTime = 0, FALLBACK_THROTTLE_MS = 300, workInProgressRootRenderTargetTime = Infinity, RENDER_TIMEOUT_MS = 500, workInProgressTransitions = null, workInProgressUpdateTask = null, legacyErrorBoundariesThatAlreadyFailed = null, IMMEDIATE_COMMIT = 0, ABORTED_VIEW_TRANSITION_COMMIT = 1, DELAYED_PASSIVE_COMMIT = 2, ANIMATION_STARTED_COMMIT = 3, NO_PENDING_EFFECTS = 0, PENDING_MUTATION_PHASE = 1, PENDING_LAYOUT_PHASE = 2, PENDING_AFTER_MUTATION_PHASE = 3, PENDING_SPAWNED_WORK = 4, PENDING_PASSIVE_PHASE = 5, pendingEffectsStatus = 0, pendingEffectsRoot = null, pendingFinishedWork = null, pendingEffectsLanes = 0, pendingEffectsRemainingLanes = 0, pendingEffectsRenderEndTime = -0, pendingPassiveTransitions = null, pendingRecoverableErrors = null, pendingSuspendedCommitReason = null, pendingDelayedCommitReason = IMMEDIATE_COMMIT, pendingSuspendedViewTransitionReason = null, NESTED_UPDATE_LIMIT = 50, nestedUpdateCount = 0, rootWithNestedUpdates = null, isFlushingPassiveEffects = false, didScheduleUpdateDuringPassiveEffects = false, NESTED_PASSIVE_UPDATE_LIMIT = 50, nestedPassiveUpdateCount = 0, rootWithPassiveNestedUpdates = null, isRunningInsertionEffect = false, didWarnStateUpdateForNotYetMountedComponent = null, didWarnAboutUpdateInRender = false;
-      var didWarnAboutUpdateInRenderForAnotherComponent =  new Set();
+      var didWarnAboutUpdateInRenderForAnotherComponent = /* @__PURE__ */ new Set();
       var fakeActCallbackNode$1 = {}, firstScheduledRoot = null, lastScheduledRoot = null, didScheduleMicrotask = false, didScheduleMicrotask_act = false, mightHavePendingSyncWork = false, isFlushingWork = false, currentEventTransitionLane = 0, fakeActCallbackNode = {};
       (function() {
         for (var i = 0; i < simpleEventPluginEvents.length; i++) {
@@ -19784,9 +19784,9 @@ var require_react_dom_client_development = __commonJS({
         "beforetoggle cancel close invalid load scroll scrollend toggle".split(" ").concat(mediaEventTypes)
       ), listeningMarker = "_reactListening" + Math.random().toString(36).slice(2), didWarnControlledToUncontrolled = false, didWarnUncontrolledToControlled = false, didWarnFormActionType = false, didWarnFormActionName = false, didWarnFormActionTarget = false, didWarnFormActionMethod = false, didWarnPopoverTargetObject = false;
       var didWarnForNewBooleanPropsWithEmptyValue = {};
-      var NORMALIZE_NEWLINES_REGEX = /\r\n?/g, NORMALIZE_NULL_AND_REPLACEMENT_REGEX = /\u0000|\uFFFD/g, xlinkNamespace = "http:
+      var NORMALIZE_NEWLINES_REGEX = /\r\n?/g, NORMALIZE_NULL_AND_REPLACEMENT_REGEX = /\u0000|\uFFFD/g, xlinkNamespace = "http://www.w3.org/1999/xlink", xmlNamespace = "http://www.w3.org/XML/1998/namespace", EXPECTED_FORM_ACTION_URL = "javascript:throw new Error('React form unexpectedly submitted.')", SUPPRESS_HYDRATION_WARNING = "suppressHydrationWarning", ACTIVITY_START_DATA = "&", ACTIVITY_END_DATA = "/&", SUSPENSE_START_DATA = "$", SUSPENSE_END_DATA = "/$", SUSPENSE_PENDING_START_DATA = "$?", SUSPENSE_QUEUED_START_DATA = "$~", SUSPENSE_FALLBACK_START_DATA = "$!", PREAMBLE_CONTRIBUTION_HTML = "html", PREAMBLE_CONTRIBUTION_BODY = "body", PREAMBLE_CONTRIBUTION_HEAD = "head", FORM_STATE_IS_MATCHING = "F!", FORM_STATE_IS_NOT_MATCHING = "F", DOCUMENT_READY_STATE_LOADING = "loading", STYLE = "style", HostContextNamespaceNone = 0, HostContextNamespaceSvg = 1, HostContextNamespaceMath = 2, eventsEnabled = null, selectionInformation = null, warnedUnknownTags = { dialog: true, webview: true }, currentPopstateTransitionEvent = null, schedulerEvent = void 0, scheduleTimeout = "function" === typeof setTimeout ? setTimeout : void 0, cancelTimeout = "function" === typeof clearTimeout ? clearTimeout : void 0, noTimeout = -1, localPromise = "function" === typeof Promise ? Promise : void 0, scheduleMicrotask = "function" === typeof queueMicrotask ? queueMicrotask : "undefined" !== typeof localPromise ? function(callback) {
         return localPromise.resolve(null).then(callback).catch(handleErrorInNextTick);
-      } : scheduleTimeout, previousHydratableOnEnteringScopedSingleton = null, NotLoaded = 0, Loaded = 1, Errored = 2, Settled = 3, Inserted = 4, preloadPropsMap =  new Map(), preconnectsSet =  new Set(), previousDispatcher = ReactDOMSharedInternals.d;
+      } : scheduleTimeout, previousHydratableOnEnteringScopedSingleton = null, NotLoaded = 0, Loaded = 1, Errored = 2, Settled = 3, Inserted = 4, preloadPropsMap = /* @__PURE__ */ new Map(), preconnectsSet = /* @__PURE__ */ new Set(), previousDispatcher = ReactDOMSharedInternals.d;
       ReactDOMSharedInternals.d = {
         f: function() {
           var previousWasRendering = previousDispatcher.f(), wasRendering = flushSyncWork$1();
@@ -20004,7 +20004,7 @@ var require_react_dom_client_development = __commonJS({
       setSuspenseHandler = function(newShouldSuspendImpl) {
         shouldSuspendImpl = newShouldSuspendImpl;
       };
-      var _enabled = true, return_targetInst = null, hasScheduledReplayAttempt = false, queuedFocus = null, queuedDrag = null, queuedMouse = null, queuedPointers =  new Map(), queuedPointerCaptures =  new Map(), queuedExplicitHydrationTargets = [], discreteReplayableEvents = "mousedown mouseup touchcancel touchend touchstart auxclick dblclick pointercancel pointerdown pointerup dragend dragstart drop compositionend compositionstart keydown keypress keyup input textInput copy cut paste click change contextmenu reset".split(
+      var _enabled = true, return_targetInst = null, hasScheduledReplayAttempt = false, queuedFocus = null, queuedDrag = null, queuedMouse = null, queuedPointers = /* @__PURE__ */ new Map(), queuedPointerCaptures = /* @__PURE__ */ new Map(), queuedExplicitHydrationTargets = [], discreteReplayableEvents = "mousedown mouseup touchcancel touchend touchstart auxclick dblclick pointercancel pointerdown pointerup dragend dragstart drop compositionend compositionstart keydown keypress keyup input textInput copy cut paste click change contextmenu reset".split(
         " "
       ), lastScheduledReplayQueue = null;
       ReactDOMHydrationRoot.prototype.render = ReactDOMRoot.prototype.render = function(children) {
@@ -20052,11 +20052,11 @@ var require_react_dom_client_development = __commonJS({
         var isomorphicReactPackageVersion = React.version;
         if ("19.2.0" !== isomorphicReactPackageVersion)
           throw Error(
-            'Incompatible React versions: The "react" and "react-dom" packages must have the exact same version. Instead got:\n  - react:      ' + (isomorphicReactPackageVersion + "\n  - react-dom:  19.2.0\nLearn more: https:
+            'Incompatible React versions: The "react" and "react-dom" packages must have the exact same version. Instead got:\n  - react:      ' + (isomorphicReactPackageVersion + "\n  - react-dom:  19.2.0\nLearn more: https://react.dev/warnings/version-mismatch")
           );
       })();
       "function" === typeof Map && null != Map.prototype && "function" === typeof Map.prototype.forEach && "function" === typeof Set && null != Set.prototype && "function" === typeof Set.prototype.clear && "function" === typeof Set.prototype.forEach || console.error(
-        "React depends on Map and Set built-in types. Make sure that you load a polyfill in older browsers. https:
+        "React depends on Map and Set built-in types. Make sure that you load a polyfill in older browsers. https://react.dev/link/react-polyfills"
       );
       ReactDOMSharedInternals.findDOMNode = function(componentOrElement) {
         var fiber = componentOrElement._reactInternals;
@@ -20099,7 +20099,7 @@ var require_react_dom_client_development = __commonJS({
       })() && canUseDOM && window.top === window.self && (-1 < navigator.userAgent.indexOf("Chrome") && -1 === navigator.userAgent.indexOf("Edge") || -1 < navigator.userAgent.indexOf("Firefox"))) {
         var protocol = window.location.protocol;
         /^(https?|file):$/.test(protocol) && console.info(
-          "%cDownload the React DevTools for a better development experience: https:
+          "%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools" + ("file:" === protocol ? "\nYou might need to use a local HTTP server (instead of file://): https://react.dev/link/react-devtools-faq" : ""),
           "font-weight:bold"
         );
       }
@@ -20176,7 +20176,7 @@ var require_react_dom_client_development = __commonJS({
   }
 });
 
-
+// node_modules/react-dom/client.js
 var require_client = __commonJS({
   "node_modules/react-dom/client.js"(exports, module) {
     if (false) {
@@ -20188,4 +20188,4 @@ var require_client = __commonJS({
   }
 });
 export default require_client();
-
+//# sourceMappingURL=react-dom_client.js.map

@@ -1,8 +1,8 @@
-
+// src/pages/features/tasks/hooks/useTasksProcessing.js
 import { useMemo } from "react";
 
 export function useTasksProcessing(columns, processedTasks) {
-    
+    // 1) Плоский массив задач
     const flatTasks = useMemo(() => {
         return columns.flatMap(col =>
             col.tasks.map(task => ({
@@ -12,7 +12,7 @@ export function useTasksProcessing(columns, processedTasks) {
         );
     }, [columns]);
 
-    
+    // 2) Пересобираем колонки для UI
     const uiColumns = useMemo(() => {
         return columns.map(col => ({
             ...col,

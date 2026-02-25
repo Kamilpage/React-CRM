@@ -19,7 +19,7 @@ const NoteDetailsModal = ({note, isOpen, onClose}) => {
         <>
             <Modal isOpen={isOpen} onClose={onClose}>
                 <div className={styles.container}>
-                    {}
+                    {/* HEADER */}
                     <div className={styles.header}>
                         <h2>{note.title}</h2>
 
@@ -34,7 +34,7 @@ const NoteDetailsModal = ({note, isOpen, onClose}) => {
                         </div>
                     </div>
 
-                    {}
+                    {/* TAGS */}
                     {note.tags.length > 0 && (
                         <div className={styles.tags}>
                             {note.tags.map(tag => (
@@ -48,12 +48,12 @@ const NoteDetailsModal = ({note, isOpen, onClose}) => {
                         </div>
                     )}
 
-                    {}
+                    {/* CONTENT */}
                     <div className={styles.content}>
                         {note.content}
                     </div>
 
-                    {}
+                    {/* FOOTER */}
                     <div className={styles.footer}>
                         <div className={styles.meta}>
                             <div className={styles.author}>
@@ -72,7 +72,7 @@ const NoteDetailsModal = ({note, isOpen, onClose}) => {
                 </div>
             </Modal>
 
-            {}
+            {/* EDIT */}
             {isEditOpen && (
                 <EditNotesModal
                     isOpen={isEditOpen}
@@ -82,7 +82,7 @@ const NoteDetailsModal = ({note, isOpen, onClose}) => {
                 />
             )}
 
-            {}
+            {/* DELETE CONFIRM */}
             {isConfirmOpen && (
                 <ConfirmModal
                     title="Delete note?"

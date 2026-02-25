@@ -14,7 +14,8 @@ const Dashboard = () => {
             <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr ', gap: 24 }}>
                 <CompaniesTable />
                 <CompanyCategoriesChart />
-            </div>        </DashboardProvider>
+            </div>
+        </DashboardProvider>
     );
 };
 

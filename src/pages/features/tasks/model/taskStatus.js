@@ -1,4 +1,4 @@
-
+// src/pages/features/tasks/model/taskStatus.js
 
 export const TASK_STATUS = [
     {
@@ -21,17 +21,21 @@ export const TASK_STATUS = [
     }
 ];
 
-
+/**
+ * Быстрый доступ: STATUS_MAP["planned"] → { label, color, order }
+ */
 export const STATUS_MAP = TASK_STATUS.reduce((acc, item) => {
     acc[item.id] = item;
     return acc;
 }, {});
 
 
-
+/**
+ * Универсальные функции (опционально)
+ */
 
 export const getStatusLabel = statusId => STATUS_MAP[statusId]?.label || "";
 export const getStatusColor = statusId => STATUS_MAP[statusId]?.color || "#ccc";
 export const getStatusOrder = statusId => STATUS_MAP[statusId]?.order ?? 999;
 
-export const STATUS_LIST = TASK_STATUS; 
+export const STATUS_LIST = TASK_STATUS; // удобный alias

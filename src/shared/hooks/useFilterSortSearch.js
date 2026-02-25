@@ -10,7 +10,7 @@ export function useFilterSortSearch(rawItems, query, config) {
     const [sortBy, setSortBy] = useState(Object.keys(sorters)[0]);
     const [filters, setFilters] = useState([]);
 
-    
+    // SEARCH
     const searched = useMemo(() => {
         if (!query?.trim()) return rawItems;
 
@@ -24,7 +24,7 @@ export function useFilterSortSearch(rawItems, query, config) {
         );
     }, [rawItems, query, searchableFields]);
 
-    
+    // FILTER + SORT
     const processed = useMemo(() => {
         let list = [...searched];
 

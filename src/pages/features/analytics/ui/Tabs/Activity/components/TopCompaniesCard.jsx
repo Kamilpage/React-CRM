@@ -9,10 +9,10 @@ const TopCompaniesCard = ({ companies }) => {
                 {companies.map((item, index) => (
                     <li key={item.id} className={styles.item}>
 
-                        {}
+                        {/* Номер */}
                         <span className={styles.index}>{index + 1}.</span>
 
-                        {}
+                        {/* Лого + Название */}
                         <div className={styles.company}>
                             <img
                                 src={item.logo}
@@ -22,7 +22,7 @@ const TopCompaniesCard = ({ companies }) => {
                             <span className={styles.name}>{item.name}</span>
                         </div>
 
-                        {}
+                        {/* Индикатор тренда */}
                         <div
                             className={
                                 item.trend === "up"

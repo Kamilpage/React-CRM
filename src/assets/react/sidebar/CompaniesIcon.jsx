@@ -3,7 +3,7 @@ import React from 'react';
 const CompaniesIcon = ({isActive}) => {
     return (
         <>
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http:
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M16.8755 5.625H3.12549C2.78031 5.625 2.50049 5.90482 2.50049 6.25V16.25C2.50049 16.5952 2.78031 16.875 3.12549 16.875H16.8755C17.2207 16.875 17.5005 16.5952 17.5005 16.25V6.25C17.5005 5.90482 17.2207 5.625 16.8755 5.625Z"
                     stroke={isActive ? '#000' : '#727272'} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>

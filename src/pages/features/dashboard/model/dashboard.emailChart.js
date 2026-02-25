@@ -5,7 +5,7 @@ export const EMAIL_OPEN_RATE = [
     { month: 'Apr', value: 77 },
     { month: 'May', value: 69 },
     { month: 'Jun', value: 54 },
-    { month: 'Jul', value: 64, active: true },   
+    { month: 'Jul', value: 64, active: true },   // ← активная колонка
     { month: 'Aug', value: 70 },
     { month: 'Sep', value: 63 },
     { month: 'Oct', value: 55 },

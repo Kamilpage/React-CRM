@@ -3,7 +3,7 @@ import React from 'react';
 const EmailsIcon = ({isActive}) => {
     return (
         <>
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http:
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M17.5 4.375L10 11.25L2.5 4.375" stroke={isActive ? '#000' : '#727272'} strokeWidth="1.5" strokeLinecap="round"
                       strokeLinejoin="round"></path>
                 <path

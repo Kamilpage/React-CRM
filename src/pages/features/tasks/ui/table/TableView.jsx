@@ -5,7 +5,7 @@ import styles from "./tableView.module.css";
  const TableView = () => {
     const { columns } = useTasks();
 
-    
+    // собираем все задачи
     const tasks = columns.flatMap(col =>
         col.tasks.map(t => ({ ...t, columnId: col.id }))
     );

@@ -1,4 +1,4 @@
-
+// src/pages/features/tasks/model/taskBoardTypes.js
 
 export const DEFAULT_TASK_COLUMNS = [
     {

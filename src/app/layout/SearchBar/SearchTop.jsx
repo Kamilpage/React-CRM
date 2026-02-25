@@ -7,7 +7,7 @@ import { useEffect, useRef } from "react";
 import {useUser} from "../../context/UserContext.jsx";
 import {useSearch} from "../../context/SearchContext.jsx";
 
-
+// ЗДЕСЬ ПОИСК, HELP CENTER, ACCOUNT СВЕРХУ ЭКРАНА
 
 
 const SearchTop = () => {

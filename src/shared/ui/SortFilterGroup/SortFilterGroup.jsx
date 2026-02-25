@@ -7,7 +7,7 @@ import FilterIcon from "../../../assets/react/topbar/FilterIcon.jsx";
 const SortFilterGroup = ({
                              sortItems = [],
                              filterItems = [],
-                             activeSort,          
+                             activeSort,          // 👈 добавили
                              onSortChange,
                              onFilterChange
                          }) => {
@@ -32,7 +32,7 @@ const SortFilterGroup = ({
 
     return (
         <div className={styles.group}>
-            {}
+            {/* SORT */}
             <div className={styles.dropdownWrapper}>
                 <button
                     className={styles.topbarBtn}
@@ -68,7 +68,7 @@ const SortFilterGroup = ({
                 )}
             </div>
 
-            {}
+            {/* FILTER */}
             <div className={styles.dropdownWrapper}>
                 <button
                     className={styles.topbarBtn}

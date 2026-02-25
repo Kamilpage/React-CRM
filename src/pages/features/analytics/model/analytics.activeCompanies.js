@@ -1,4 +1,4 @@
-
+// src/pages/analytics/model/analytics.activeCompanies.js
 
 export const activeCompanies = {
     total: 341,

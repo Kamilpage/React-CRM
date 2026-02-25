@@ -13,7 +13,7 @@ const EditNotesModal = ({ isOpen, note, onClose, onSave }) => {
 
     const [isConfirmOpen, setIsConfirmOpen] = useState(false);
 
-    
+    /* 🔹 КЛЮЧЕВОЙ МОМЕНТ */
     useEffect(() => {
         if (note && isOpen) {
             setForm({

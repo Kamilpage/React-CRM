@@ -12,7 +12,7 @@ const ListIcon = ({isActive}) => {
 
     return (
         <>
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http:
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M3.75 8.75L16.25 8.75C16.5952 8.75 16.875 8.47018 16.875 8.125L16.875 5C16.875 4.65482 16.5952 4.375 16.25 4.375L3.75 4.375C3.40482 4.375 3.125 4.65482 3.125 5L3.125 8.125C3.125 8.47018 3.40482 8.75 3.75 8.75Z"
                     stroke={strokeColor}

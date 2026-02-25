@@ -72,13 +72,13 @@
     margin-bottom: 6px;
 }
 .commentsList {
-    max-height: 260px;
+    max-height: 260px;          /* можно 220–300 под вкус */
     overflow-y: auto;
     padding-right: 6px;
     margin-bottom: 10px;
 }
 
-
+/* аккуратный скролл */
 .commentsList::-webkit-scrollbar {
     width: 6px;
 }

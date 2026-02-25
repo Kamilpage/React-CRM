@@ -21,7 +21,7 @@ const initialState = {
     emailYear: EMAIL_OPEN_RATE_YEAR,
     companiesCategory: null,
 
-    periodType: 'month', 
+    periodType: 'month', // 'month' | 'year'
 };
 
 function reducer(state, action) {
@@ -58,7 +58,7 @@ export const DashboardProvider = ({ children }) => {
         () => ({
             ...state,
 
-            
+            // === Actions ===
             setPeriodType: (type) =>
                 dispatch({ type: 'SET_PERIOD_TYPE', payload: type }),
 

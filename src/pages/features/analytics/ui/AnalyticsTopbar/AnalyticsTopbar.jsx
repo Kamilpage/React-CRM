@@ -48,7 +48,7 @@ const AnalyticsTopbar = () => {
 
             right={
                 <>
-                    {}
+                    {/* Место под будущие фильтры Period (Month/Year/Range) */}
                 </>
             }
         />

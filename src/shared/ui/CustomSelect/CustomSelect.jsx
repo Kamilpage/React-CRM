@@ -10,7 +10,7 @@ const CustomSelect = ({ value, onChange, options }) => {
     const triggerRef = useRef(null);
     const menuRef = useRef(null);
 
-    
+    /* Закрытие по клику вне */
     useEffect(() => {
         const handleClick = (e) => {
             if (
@@ -23,11 +23,11 @@ const CustomSelect = ({ value, onChange, options }) => {
             }
         };
 
-        document.addEventListener("click", handleClick); 
+        document.addEventListener("click", handleClick); // важно: click, не mousedown
         return () => document.removeEventListener("click", handleClick);
     }, []);
 
-    
+    /* Позиция dropdown */
     const toggleOpen = () => {
         if (!isOpen && triggerRef.current) {
             const rect = triggerRef.current.getBoundingClientRect();

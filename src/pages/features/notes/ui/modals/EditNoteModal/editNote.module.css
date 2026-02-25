@@ -5,7 +5,7 @@
     width: 480px;
 }
 
-
+/* HEADER */
 .form h3 {
     font-size: 18px;
     font-weight: 600;
@@ -13,7 +13,7 @@
     margin-bottom: 4px;
 }
 
-
+/* INPUTS */
 .form input,
 .form textarea {
     width: 100%;
@@ -27,7 +27,7 @@
 }
 
 .form textarea {
-    min-height: 140px;
+    min-height: 140px; /* больше, чем в add — редактирование текста */
     resize: vertical;
     line-height: 1.5;
 }
@@ -43,7 +43,7 @@
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08);
 }
 
-
+/* TAGS */
 .tags {
     display: flex;
     flex-wrap: wrap;
@@ -70,7 +70,7 @@
     outline: 2px solid rgba(0, 0, 0, 0.18);
 }
 
-
+/* ACTIONS */
 .actions {
     display: flex;
     justify-content: flex-end;
@@ -89,7 +89,7 @@
     border-color 0.15s ease;
 }
 
-
+/* PRIMARY (Save) */
 .actions button[type='submit'] {
     background: #111;
     color: #fff;
@@ -100,7 +100,7 @@
     background: #000;
 }
 
-
+/* SECONDARY (Cancel) */
 .actions button[type='button'] {
     color: #555;
 }

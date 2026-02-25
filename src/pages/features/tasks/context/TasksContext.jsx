@@ -1,4 +1,4 @@
-
+// src/pages/features/tasks/context/TasksContext.jsx
 
 import { createContext, useContext } from "react";
 
@@ -15,7 +15,7 @@ export const TasksProvider = ({ children }) => {
     const { user } = useUser();
     const { query } = useSearch();
 
-    
+    /* 1) Raw data layer */
     const {
         columns,
         setColumns,
@@ -24,9 +24,9 @@ export const TasksProvider = ({ children }) => {
         moveTask,
     } = useTasksData();
 
-    
+    /* CRUD EXTENSIONS */
 
-    
+    // Edit
     const editTask = (taskId, updates) => {
         setColumns(prev =>
             prev.map(col => ({
@@ -40,7 +40,7 @@ export const TasksProvider = ({ children }) => {
         );
     };
 
-    
+    // Delete (simple remove by ID)
     const deleteTask = (taskId) => {
         setColumns(prev =>
             prev.map(col => ({
@@ -50,7 +50,7 @@ export const TasksProvider = ({ children }) => {
         );
     };
 
-    
+    // Move To (quick change column)
     const moveTaskTo = (taskId, newColumnId) => {
         setColumns(prev => {
             let movedTask = null;
@@ -74,7 +74,7 @@ export const TasksProvider = ({ children }) => {
         });
     };
 
-    
+    // Duplicate
     const duplicateTask = (taskId) => {
         setColumns(prev =>
             prev.map(col => {
@@ -92,10 +92,10 @@ export const TasksProvider = ({ children }) => {
         );
     };
 
-    
+    /* 2) Flatten for search/filter/sort engine */
     const { flatTasks } = useTasksProcessing(columns, []);
 
-    
+    /* 3) UI search/filters/sort */
     const {
         tasks: processedTasks,
         filters,
@@ -104,10 +104,10 @@ export const TasksProvider = ({ children }) => {
         setSortKey
     } = useTasksSearchSortFilter(flatTasks, query);
 
-    
+    /* 4) Rebuild UI columns */
     const { uiColumns } = useTasksProcessing(columns, processedTasks);
 
-    
+    /* 5) Comments (optional) */
     const addComment = (columnId, taskId, text) => {
         setColumns(prev =>
             prev.map(col =>
@@ -136,7 +136,7 @@ export const TasksProvider = ({ children }) => {
         );
     };
 
-    
+    /* 6) Attachments (optional) */
     const addAttachment = (columnId, taskId, file) => {
         setColumns(prev =>
             prev.map(col =>
@@ -168,27 +168,27 @@ export const TasksProvider = ({ children }) => {
     return (
         <TasksContext.Provider
             value={{
-                
+                // UI-ready columns
                 columns: uiColumns,
 
-                
+                // Filters & sort
                 filters,
                 setFilters,
                 sortKey,
                 setSortKey,
 
-                
+                // Base CRUD
                 addTask,
                 removeTask,
                 moveTask,
 
-                
+                // Extended CRUD
                 editTask,
                 deleteTask,
                 moveTaskTo,
                 duplicateTask,
 
-                
+                // Extra features
                 addComment,
                 addAttachment
             }}
