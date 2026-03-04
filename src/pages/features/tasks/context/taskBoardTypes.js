@@ -19,4 +19,5 @@ export const DEFAULT_TASK_COLUMNS = [
         color: "#39C682",
         tasks: []
     }
+
 ];
