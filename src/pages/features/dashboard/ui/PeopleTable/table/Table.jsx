@@ -1,4 +1,6 @@
 import styles from './table.module.css';
+import {motion} from "framer-motion";
+
 
 const Table = ({
                    data = [],
@@ -17,6 +19,16 @@ const Table = ({
                 field: key,
                 direction: sorting.direction === 'asc' ? 'desc' : 'asc',
             });
+        }
+    };
+
+    const MotionRow = motion.tr;
+    const rowAnimation = {
+        hidden: { opacity: 0, y: 8 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.25 }
         }
     };
 
@@ -47,7 +59,13 @@ const Table = ({
                 </tr>
                 </thead>
 
-                <tbody>
+                <motion.tbody
+                    initial="hidden"
+                    animate="visible"
+                    whileInView="true"
+                    viewport={{once: true}}
+                    transition={{ staggerChildren: 0.04 }}
+                >
                 {data.length === 0 ? (
                     <tr>
                         <td
@@ -59,7 +77,12 @@ const Table = ({
                     </tr>
                 ) : (
                     data.map((row) => (
-                        <tr key={row[rowKey]}>
+                        <MotionRow
+                            key={row[rowKey]}
+                            variants={rowAnimation}
+                            layout
+                            whileHover={{ backgroundColor: "rgba(0,0,0,0.03)" }}
+                        >
                             {columns.map((col) => (
                                 <td key={col.key}>
                                     {col.render
@@ -67,10 +90,10 @@ const Table = ({
                                         : row[col.key]}
                                 </td>
                             ))}
-                        </tr>
+                        </MotionRow>
                     ))
                 )}
-                </tbody>
+                </motion.tbody>
             </table>
         </div>
     );

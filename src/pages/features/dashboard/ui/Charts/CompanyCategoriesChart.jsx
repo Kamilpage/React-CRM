@@ -5,6 +5,9 @@ import {
     Tooltip,
     ResponsiveContainer,
 } from 'recharts';
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
 
 import { useDashboard } from '../../context/DashboardContext';
 import { COMPANY_CATEGORIES } from '../../model/dashboard.companyCategories';
@@ -17,6 +20,9 @@ const CompanyCategoriesChart = () => {
         setCompaniesCategory,
     } = useDashboard();
 
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true, margin: "-80px" });
+
     // считаем данные
     const data = COMPANY_CATEGORIES.map((cat) => ({
         ...cat,
@@ -26,7 +32,13 @@ const CompanyCategoriesChart = () => {
     })).filter((d) => d.value > 0);
 
     return (
-        <div className={styles.card}>
+        <motion.div
+            ref={ref}
+            className={styles.card}
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.4 }}
+        >
             <h3 className={styles.title}>
                 Company Categories
             </h3>
@@ -91,7 +103,7 @@ const CompanyCategoriesChart = () => {
                     </div>
                 ))}
             </div>
-        </div>
+        </motion.div>
     );
 };
 

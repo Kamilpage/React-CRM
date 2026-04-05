@@ -1,10 +1,18 @@
 import AgendaItem from './AgendaItem';
 import styles from './agenda.module.css';
 import {DASHBOARD_AGENDA} from "../../model/dashboard.agenda.js";
+import { motion } from "framer-motion";
+
 
 const UpcomingAgenda = () => {
     return (
-        <div className={styles.card}>
+        <motion.div
+            className={styles.card}
+            initial="hidden"
+            animate="visible"
+            transition={{ staggerChildren: 0.08 }}
+        >
+
             <h3 className={styles.title}>Upcoming Agenda</h3>
 
             <div className={styles.list}>
@@ -12,7 +20,7 @@ const UpcomingAgenda = () => {
                     <AgendaItem key={item.id} item={item} />
                 ))}
             </div>
-        </div>
+        </motion.div>
     );
 };
 

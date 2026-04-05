@@ -1,0 +1,19 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.addBtn {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.addBtn:hover {
+    background: #1e4ed8;
+}

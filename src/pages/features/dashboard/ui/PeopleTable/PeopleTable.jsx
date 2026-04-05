@@ -1,7 +1,18 @@
-import { useDashboard } from '../../context/DashboardContext';
+import {useDashboard} from '../../context/DashboardContext';
 import styles from './peopleTable.module.css';
 import {getFilteredPeople} from "../../model/dashboard.selectors.js";
 import Table from "./table/Table.jsx";
+import {motion} from "framer-motion";
+
+const tableAnimation = {
+    hidden: {opacity: 0, y: 20},
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {duration: 0.35}
+    }
+}
+
 
 const PeopleTable = () => {
     const {
@@ -21,7 +32,7 @@ const PeopleTable = () => {
             sortable: true,
             render: (row) => (
                 <div className={styles.person}>
-                    <img src={row.avatar} className={styles.avatar} />
+                    <img src={row.avatar} className={styles.avatar}/>
                     <div>
                         <div className={styles.name}>{row.name}</div>
                         <div className={styles.email}>{row.email}</div>
@@ -73,7 +84,14 @@ const PeopleTable = () => {
     ];
 
     return (
-        <div className={styles.wrapper}>
+        <motion.div
+            className={styles.wrapper}
+            variants={tableAnimation}
+            initial="hidden"
+            animate="visible"
+            whileInView="visible"
+            viewport={{once: true, margin: "-50px"}}
+        >
             <div className={styles.topbar}>
                 <input
                     type="text"
@@ -96,7 +114,7 @@ const PeopleTable = () => {
                 sorting={peopleSort}
                 onSortChange={setPeopleSort}
             />
-        </div>
+        </motion.div>
     );
 };
 

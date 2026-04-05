@@ -25,7 +25,7 @@ export const NotificationsProvider = ({ children }) => {
 
     return (
         <NotificationsContext.Provider
-            value={{ isOpen, toggle, notifications, markAllRead, markRead }}
+            value={{ isOpen, toggle, notifications, markAllRead, markRead, setIsOpen }}
         >
             {children}
         </NotificationsContext.Provider>

@@ -8,6 +8,8 @@ import {TasksProvider} from './pages/features/tasks/context/TasksContext.jsx';
 import {UserProvider} from "./app/context/UserContext.jsx";
 import {ConfirmProvider} from "./shared/modals/ConfirmModal/ConfirmContext.jsx";
 import {SearchProvider} from "./app/context/SearchContext.jsx";
+import {EmailsProvider} from "./pages/features/emails/contex/EmailsContext.jsx";
+import {CalendarProvider} from "./pages/features/calendar/context/CalendarContext.jsx";
 
 
 
@@ -18,7 +20,11 @@ createRoot(document.getElementById('root')).render(
             <UserProvider>
                 <TasksProvider>
                     <ConfirmProvider>
+                        <EmailsProvider>
+                            <CalendarProvider>
                         <App />
+                            </CalendarProvider>
+                        </EmailsProvider>
                     </ConfirmProvider>
                 </TasksProvider>
             </UserProvider>
