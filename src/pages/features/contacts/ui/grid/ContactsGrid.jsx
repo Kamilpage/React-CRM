@@ -2,7 +2,7 @@ import { useContacts } from "../../context/ContactsContext.jsx";
 import styles from "./contactsGrid.module.css";
 
 const ContactsGrid = () => {
-    const contacts = useContacts();
+    const { contacts } = useContacts();
 
     // объединяем как в таблице
     const rows = [

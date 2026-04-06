@@ -7,9 +7,19 @@ import { useSearch } from "../../../../app/context/SearchContext.jsx";
 
 import { useTasksData } from "./useTasksData.js";
 import { useTasksProcessing } from "./useTasksProcessing.js";
-import { useTasksSearchSortFilter } from "./useTasksSearchSortFilter.js";
+import { useFilterSortSearch } from "../../../../shared/hooks/useFilterSortSearch.js";
+
+const TASK_SEARCH_FIELDS = ["title", "description"];
+const taskFilterPredicate = (task, filters) => task.tags?.some(tag => filters.includes(tag));
+const TASK_SORTERS = {
+    created: (a, b) => new Date(b.createdAt) - new Date(a.createdAt),
+    due:     (a, b) => new Date(a.dueDate)   - new Date(b.dueDate),
+    title:   (a, b) => a.title.localeCompare(b.title),
+};
 
 const TasksContext = createContext(null);
+
+
 
 export const TasksProvider = ({ children }) => {
     const { user } = useUser();
@@ -97,12 +107,16 @@ export const TasksProvider = ({ children }) => {
 
     /* 3) UI search/filters/sort */
     const {
-        tasks: processedTasks,
+        items: processedTasks,
+        sortBy,
+        setSortBy,
         filters,
         setFilters,
-        sortKey,
-        setSortKey
-    } = useTasksSearchSortFilter(flatTasks, query);
+    } = useFilterSortSearch(flatTasks, query, {
+        searchableFields: TASK_SEARCH_FIELDS,
+        filterPredicate: taskFilterPredicate,
+        sorters: TASK_SORTERS,
+    });
 
     /* 4) Rebuild UI columns */
     const { uiColumns } = useTasksProcessing(columns, processedTasks);
@@ -174,8 +188,8 @@ export const TasksProvider = ({ children }) => {
                 // Filters & sort
                 filters,
                 setFilters,
-                sortKey,
-                setSortKey,
+                sortBy,
+                setSortBy,
 
                 // Base CRUD
                 addTask,

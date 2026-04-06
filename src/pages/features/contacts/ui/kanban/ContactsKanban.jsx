@@ -3,7 +3,7 @@ import styles from "./contactsKanban.module.css";
 import {useContacts} from "../../context/ContactsContext.jsx";
 
 const ContactsKanban = () => {
-    const contacts = useContacts();
+    const { contacts } = useContacts();
 
     return (
         <div className={styles.wrapper}>

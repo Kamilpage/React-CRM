@@ -2,7 +2,7 @@ import { useContacts } from "../../context/ContactsContext.jsx";
 import styles from "./contactsTable.module.css";
 
 const ContactsTable = () => {
-    const contacts = useContacts();
+    const { contacts } = useContacts();
 
     // Объединяем все категории в одну таблицу
     const rows = [

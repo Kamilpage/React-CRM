@@ -3,7 +3,7 @@ import ContactsListGroup from "./ContactsListGroup.jsx";
 import styles from "./contactsList.module.css";
 
 const ContactsList = () => {
-    const contacts = useContacts();
+    const { contacts } = useContacts();
 
     return (
         <div className={styles.wrapper}>
