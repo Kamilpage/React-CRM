@@ -18,6 +18,10 @@ import EmailsTopbar from "./pages/features/emails/ui/emailsTopbar/EmailsTopbar.j
 import EmailsPage from "./pages/features/emails/ui/Emailspage/Emailspage.jsx";
 import CalendarPage from "./pages/features/calendar/ui/CalendarPage/CalendarPage.jsx";
 import ContactsTopbar from "./pages/features/contacts/ui/contactsTopbar/ContactsTopbar.jsx";
+import ContactsPage from "./pages/features/contacts/ui/ContactsList/ContactsPage.jsx";
+import CompaniesPage from "./pages/features/companies/ui/CompaniesPage.jsx";
+import IntegrationsPage from "./pages/features/integrations/ui/IntegrationsPage.jsx";
+import SettingsPage from "./pages/features/  Settings/ui/SettingsPage.jsx";
 
 
 function App() {
@@ -64,6 +68,13 @@ function App() {
                         </Route>
 
                         <Route path="/contacts" element={<ContactsTopbar/>}>
+                            <Route index element={<ContactsPage />} />
+                        </Route>
+                        <Route path="/companies" element={<CompaniesPage/>}>
+                        </Route>
+                        <Route path="/integrations" element={<IntegrationsPage/>}>
+                        </Route>
+                        <Route path="/settings" element={<SettingsPage/>}>
                         </Route>
 
                     </Routes>

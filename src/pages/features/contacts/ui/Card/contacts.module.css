@@ -1,0 +1,32 @@
+.header {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #111;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.name {
+    font-weight: 600;
+}
+
+.email {
+    font-size: 13px;
+    color: #777;
+}
+
+.company {
+    margin-top: 12px;
+    font-size: 14px;
+    color: #444;
+}
